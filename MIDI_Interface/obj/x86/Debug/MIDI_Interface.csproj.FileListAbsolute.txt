@@ -1,0 +1,46 @@
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.pdb
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Collections.dll
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.dll
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Midi.dll
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Timers.dll
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Threading.dll
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+c:\users\pjb13148\documents\visual studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
+C:\Users\pjb13148\Documents\Visual Studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
+C:\Users\pjb13148\Documents\Visual Studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\pjb13148\Documents\Visual Studio 2010\Projects\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.pdb
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Collections.dll
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.dll
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Midi.dll
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Timers.dll
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Threading.dll
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.pdb
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Collections.dll
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.dll
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Midi.dll
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Timers.dll
+D:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Threading.dll
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResGen.read.1.tlog
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResGen.write.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResGen.read.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResGen.write.1.tlog
+E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.Properties.Resources.resources
+C:\Users\S. McCormack\Dropbox\Uni Coursework\MSc\Project\Code\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+C:\Users\S. McCormack\Dropbox\Uni Coursework\MSc\Project\Code\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
