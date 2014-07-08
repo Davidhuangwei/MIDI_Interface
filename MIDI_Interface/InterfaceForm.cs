@@ -158,6 +158,7 @@ namespace MIDI_Interface
                 {
                     case 0:                 // Fader 1
                         parameters.x1 = velocity;
+                        this.Fader1.Value = (decimal) velocity;
                         break;
                     case 1:                 // Fader 2
                         parameters.x2 = velocity;
@@ -221,6 +222,7 @@ namespace MIDI_Interface
                         break;
                     case 1:                 // Button to the right of Button 1 (Button 2)
                         parameters.y2 = onoff;
+                        Button2_Click(this, EventArgs.Empty);
                         break;
                     case 2:
                         parameters.y3 = onoff;
@@ -319,6 +321,42 @@ namespace MIDI_Interface
             BCF2000_o.Send(builder.Result);
         }
 
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            ChannelMessageBuilder builder = new ChannelMessageBuilder();
+            builder.MidiChannel = 0;
+            builder.Command = ChannelCommand.NoteOn;
+            builder.Data1 = 1;
+            if (this.Button2.BackColor == System.Drawing.Color.Green)
+            {
+                if (parameters.y2 == false)
+                {
+                    this.Button2.BackColor = System.Drawing.Color.Red;
+                }
+                else
+                {
+                    this.Button2.BackColor = System.Drawing.Color.Red;
+                    parameters.y2 = false;
+                }
+                builder.Data2 = 0;
+            }
+            else
+            {
+                if (parameters.y2 == true)
+                {
+                    this.Button2.BackColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    this.Button2.BackColor = System.Drawing.Color.Green;
+                    parameters.y2 = true;
+                }
+                builder.Data2 = 100;
+            }
+            builder.Build();
+            BCF2000_o.Send(builder.Result);
+        }
+
         private void SetUpTrayIcon()
         {
             notifyIcon = new System.Windows.Forms.NotifyIcon();
@@ -346,5 +384,22 @@ namespace MIDI_Interface
                 this.Hide();
             }
         }
+
+        private void Fader1_ValueChanged(object sender, EventArgs e)
+        {
+            float value = (float) this.Fader1.Value;
+            ChannelMessageBuilder builder = new ChannelMessageBuilder();
+            builder.MidiChannel = 0;
+            builder.Command = ChannelCommand.Controller;
+            builder.Data1 = 0;
+            if (value != parameters.x1)
+            {
+                builder.Data2 = (int)value;
+            }
+            builder.Build();
+            BCF2000_o.Send(builder.Result);
+
+        }
+
     }
 }

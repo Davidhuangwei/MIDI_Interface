@@ -44,3 +44,5 @@ E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\ResGen.write.1.tlog
 E:\Files\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.Properties.Resources.resources
 C:\Users\S. McCormack\Dropbox\Uni Coursework\MSc\Project\Code\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
 C:\Users\S. McCormack\Dropbox\Uni Coursework\MSc\Project\Code\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
