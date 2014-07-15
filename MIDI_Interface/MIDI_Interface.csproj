@@ -37,6 +37,7 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HardwareSetup.cs" />
     <Compile Include="InterfaceForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -105,9 +105,10 @@
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(54, 13);
             this.Button1.TabIndex = 0;
+            this.Button1.Tag = "B1";
             this.Button1.Text = "Button 1";
             this.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.Button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button2
             // 
@@ -116,9 +117,10 @@
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(54, 13);
             this.Button2.TabIndex = 0;
+            this.Button2.Tag = "B2";
             this.Button2.Text = "Button 2";
             this.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            this.Button2.Click += new System.EventHandler(this.Button_Click);
             // 
             // Fader1
             // 
@@ -131,7 +133,8 @@
             this.Fader1.Name = "Fader1";
             this.Fader1.Size = new System.Drawing.Size(47, 20);
             this.Fader1.TabIndex = 1;
-            this.Fader1.ValueChanged += new System.EventHandler(this.Fader1_ValueChanged);
+            this.Fader1.Tag = "F1";
+            this.Fader1.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label1
             // 
@@ -149,9 +152,10 @@
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(54, 13);
             this.Button3.TabIndex = 0;
+            this.Button3.Tag = "B3";
             this.Button3.Text = "Button 3";
             this.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button3.Click += new System.EventHandler(this.Button3_Click);
+            this.Button3.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button4
             // 
@@ -160,9 +164,10 @@
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(54, 13);
             this.Button4.TabIndex = 0;
+            this.Button4.Tag = "B4";
             this.Button4.Text = "Button 4";
             this.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button4.Click += new System.EventHandler(this.Button4_Click);
+            this.Button4.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button5
             // 
@@ -171,9 +176,10 @@
             this.Button5.Name = "Button5";
             this.Button5.Size = new System.Drawing.Size(54, 13);
             this.Button5.TabIndex = 0;
+            this.Button5.Tag = "B5";
             this.Button5.Text = "Button 5";
             this.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button5.Click += new System.EventHandler(this.Button5_Click);
+            this.Button5.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button6
             // 
@@ -182,9 +188,10 @@
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(54, 13);
             this.Button6.TabIndex = 0;
+            this.Button6.Tag = "B6";
             this.Button6.Text = "Button 6";
             this.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button6.Click += new System.EventHandler(this.Button6_Click);
+            this.Button6.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button7
             // 
@@ -193,9 +200,10 @@
             this.Button7.Name = "Button7";
             this.Button7.Size = new System.Drawing.Size(54, 13);
             this.Button7.TabIndex = 0;
+            this.Button7.Tag = "B7";
             this.Button7.Text = "Button 7";
             this.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button7.Click += new System.EventHandler(this.Button7_Click);
+            this.Button7.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button8
             // 
@@ -204,9 +212,10 @@
             this.Button8.Name = "Button8";
             this.Button8.Size = new System.Drawing.Size(54, 13);
             this.Button8.TabIndex = 0;
+            this.Button8.Tag = "B8";
             this.Button8.Text = "Button 8";
             this.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button8.Click += new System.EventHandler(this.Button8_Click);
+            this.Button8.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button17
             // 
@@ -215,9 +224,10 @@
             this.Button17.Name = "Button17";
             this.Button17.Size = new System.Drawing.Size(54, 13);
             this.Button17.TabIndex = 0;
+            this.Button17.Tag = "B17";
             this.Button17.Text = "Button 17";
             this.Button17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button17.Click += new System.EventHandler(this.Button17_Click);
+            this.Button17.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button18
             // 
@@ -226,9 +236,10 @@
             this.Button18.Name = "Button18";
             this.Button18.Size = new System.Drawing.Size(54, 13);
             this.Button18.TabIndex = 0;
+            this.Button18.Tag = "B18";
             this.Button18.Text = "Button 18";
             this.Button18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button18.Click += new System.EventHandler(this.Button18_Click);
+            this.Button18.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button9
             // 
@@ -237,9 +248,10 @@
             this.Button9.Name = "Button9";
             this.Button9.Size = new System.Drawing.Size(54, 13);
             this.Button9.TabIndex = 0;
+            this.Button9.Tag = "B9";
             this.Button9.Text = "Button 9";
             this.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button9.Click += new System.EventHandler(this.Button9_Click);
+            this.Button9.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button20
             // 
@@ -248,9 +260,10 @@
             this.Button20.Name = "Button20";
             this.Button20.Size = new System.Drawing.Size(54, 13);
             this.Button20.TabIndex = 0;
+            this.Button20.Tag = "B20";
             this.Button20.Text = "Button 20";
             this.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button20.Click += new System.EventHandler(this.Button20_Click);
+            this.Button20.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button10
             // 
@@ -259,9 +272,10 @@
             this.Button10.Name = "Button10";
             this.Button10.Size = new System.Drawing.Size(54, 13);
             this.Button10.TabIndex = 0;
+            this.Button10.Tag = "B10";
             this.Button10.Text = "Button 10";
             this.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button10.Click += new System.EventHandler(this.Button10_Click);
+            this.Button10.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button11
             // 
@@ -270,9 +284,10 @@
             this.Button11.Name = "Button11";
             this.Button11.Size = new System.Drawing.Size(54, 13);
             this.Button11.TabIndex = 0;
+            this.Button11.Tag = "B11";
             this.Button11.Text = "Button 11";
             this.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button11.Click += new System.EventHandler(this.Button11_Click);
+            this.Button11.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button12
             // 
@@ -281,9 +296,10 @@
             this.Button12.Name = "Button12";
             this.Button12.Size = new System.Drawing.Size(54, 13);
             this.Button12.TabIndex = 0;
+            this.Button12.Tag = "B12";
             this.Button12.Text = "Button 12";
             this.Button12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button12.Click += new System.EventHandler(this.Button12_Click);
+            this.Button12.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button13
             // 
@@ -292,9 +308,10 @@
             this.Button13.Name = "Button13";
             this.Button13.Size = new System.Drawing.Size(54, 13);
             this.Button13.TabIndex = 0;
+            this.Button13.Tag = "B13";
             this.Button13.Text = "Button 13";
             this.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button13.Click += new System.EventHandler(this.Button13_Click);
+            this.Button13.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button14
             // 
@@ -303,9 +320,10 @@
             this.Button14.Name = "Button14";
             this.Button14.Size = new System.Drawing.Size(54, 13);
             this.Button14.TabIndex = 0;
+            this.Button14.Tag = "B14";
             this.Button14.Text = "Button 14";
             this.Button14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button14.Click += new System.EventHandler(this.Button14_Click);
+            this.Button14.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button15
             // 
@@ -314,9 +332,10 @@
             this.Button15.Name = "Button15";
             this.Button15.Size = new System.Drawing.Size(54, 13);
             this.Button15.TabIndex = 0;
+            this.Button15.Tag = "B15";
             this.Button15.Text = "Button 15";
             this.Button15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button15.Click += new System.EventHandler(this.Button15_Click);
+            this.Button15.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button16
             // 
@@ -325,9 +344,10 @@
             this.Button16.Name = "Button16";
             this.Button16.Size = new System.Drawing.Size(54, 13);
             this.Button16.TabIndex = 0;
+            this.Button16.Tag = "B16";
             this.Button16.Text = "Button 16";
             this.Button16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button16.Click += new System.EventHandler(this.Button16_Click);
+            this.Button16.Click += new System.EventHandler(this.Button_Click);
             // 
             // Button19
             // 
@@ -336,9 +356,10 @@
             this.Button19.Name = "Button19";
             this.Button19.Size = new System.Drawing.Size(54, 13);
             this.Button19.TabIndex = 0;
+            this.Button19.Tag = "B19";
             this.Button19.Text = "Button 19";
             this.Button19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button19.Click += new System.EventHandler(this.Button19_Click);
+            this.Button19.Click += new System.EventHandler(this.Button_Click);
             // 
             // Fader2
             // 
@@ -351,7 +372,8 @@
             this.Fader2.Name = "Fader2";
             this.Fader2.Size = new System.Drawing.Size(47, 20);
             this.Fader2.TabIndex = 1;
-            this.Fader2.ValueChanged += new System.EventHandler(this.Fader2_ValueChanged);
+            this.Fader2.Tag = "F2";
+            this.Fader2.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label2
             // 
@@ -373,7 +395,8 @@
             this.Fader3.Name = "Fader3";
             this.Fader3.Size = new System.Drawing.Size(47, 20);
             this.Fader3.TabIndex = 1;
-            this.Fader3.ValueChanged += new System.EventHandler(this.Fader3_ValueChanged);
+            this.Fader3.Tag = "F3";
+            this.Fader3.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label3
             // 
@@ -395,7 +418,8 @@
             this.Fader4.Name = "Fader4";
             this.Fader4.Size = new System.Drawing.Size(47, 20);
             this.Fader4.TabIndex = 1;
-            this.Fader4.ValueChanged += new System.EventHandler(this.Fader4_ValueChanged);
+            this.Fader4.Tag = "F4";
+            this.Fader4.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label4
             // 
@@ -417,7 +441,8 @@
             this.Fader5.Name = "Fader5";
             this.Fader5.Size = new System.Drawing.Size(47, 20);
             this.Fader5.TabIndex = 1;
-            this.Fader5.ValueChanged += new System.EventHandler(this.Fader5_ValueChanged);
+            this.Fader5.Tag = "F5";
+            this.Fader5.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label5
             // 
@@ -439,7 +464,8 @@
             this.Fader6.Name = "Fader6";
             this.Fader6.Size = new System.Drawing.Size(47, 20);
             this.Fader6.TabIndex = 1;
-            this.Fader6.ValueChanged += new System.EventHandler(this.Fader6_ValueChanged);
+            this.Fader6.Tag = "F6";
+            this.Fader6.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label6
             // 
@@ -461,7 +487,8 @@
             this.Fader7.Name = "Fader7";
             this.Fader7.Size = new System.Drawing.Size(47, 20);
             this.Fader7.TabIndex = 1;
-            this.Fader7.ValueChanged += new System.EventHandler(this.Fader7_ValueChanged);
+            this.Fader7.Tag = "F7";
+            this.Fader7.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label7
             // 
@@ -483,7 +510,8 @@
             this.Fader8.Name = "Fader8";
             this.Fader8.Size = new System.Drawing.Size(47, 20);
             this.Fader8.TabIndex = 1;
-            this.Fader8.ValueChanged += new System.EventHandler(this.Fader8_ValueChanged);
+            this.Fader8.Tag = "F8";
+            this.Fader8.ValueChanged += new System.EventHandler(this.Fader_ValueChanged);
             // 
             // label8
             // 
@@ -505,7 +533,8 @@
             this.Knob1.Name = "Knob1";
             this.Knob1.Size = new System.Drawing.Size(47, 20);
             this.Knob1.TabIndex = 1;
-            this.Knob1.ValueChanged += new System.EventHandler(this.Knob1_ValueChanged);
+            this.Knob1.Tag = "K1";
+            this.Knob1.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label9
             // 
@@ -527,7 +556,8 @@
             this.Knob2.Name = "Knob2";
             this.Knob2.Size = new System.Drawing.Size(47, 20);
             this.Knob2.TabIndex = 1;
-            this.Knob2.ValueChanged += new System.EventHandler(this.Knob2_ValueChanged);
+            this.Knob2.Tag = "K2";
+            this.Knob2.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label10
             // 
@@ -549,7 +579,8 @@
             this.Knob3.Name = "Knob3";
             this.Knob3.Size = new System.Drawing.Size(47, 20);
             this.Knob3.TabIndex = 1;
-            this.Knob3.ValueChanged += new System.EventHandler(this.Knob3_ValueChanged);
+            this.Knob3.Tag = "K3";
+            this.Knob3.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label11
             // 
@@ -571,7 +602,8 @@
             this.Knob4.Name = "Knob4";
             this.Knob4.Size = new System.Drawing.Size(47, 20);
             this.Knob4.TabIndex = 1;
-            this.Knob4.ValueChanged += new System.EventHandler(this.Knob4_ValueChanged);
+            this.Knob4.Tag = "K4";
+            this.Knob4.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label12
             // 
@@ -593,7 +625,8 @@
             this.Knob5.Name = "Knob5";
             this.Knob5.Size = new System.Drawing.Size(47, 20);
             this.Knob5.TabIndex = 1;
-            this.Knob5.ValueChanged += new System.EventHandler(this.Knob5_ValueChanged);
+            this.Knob5.Tag = "K5";
+            this.Knob5.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label13
             // 
@@ -615,7 +648,8 @@
             this.Knob6.Name = "Knob6";
             this.Knob6.Size = new System.Drawing.Size(47, 20);
             this.Knob6.TabIndex = 1;
-            this.Knob6.ValueChanged += new System.EventHandler(this.Knob6_ValueChanged);
+            this.Knob6.Tag = "K6";
+            this.Knob6.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label14
             // 
@@ -637,7 +671,8 @@
             this.Knob7.Name = "Knob7";
             this.Knob7.Size = new System.Drawing.Size(47, 20);
             this.Knob7.TabIndex = 1;
-            this.Knob7.ValueChanged += new System.EventHandler(this.Knob7_ValueChanged);
+            this.Knob7.Tag = "K7";
+            this.Knob7.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label15
             // 
@@ -659,7 +694,8 @@
             this.Knob8.Name = "Knob8";
             this.Knob8.Size = new System.Drawing.Size(47, 20);
             this.Knob8.TabIndex = 1;
-            this.Knob8.ValueChanged += new System.EventHandler(this.Knob8_ValueChanged);
+            this.Knob8.Tag = "K8";
+            this.Knob8.ValueChanged += new System.EventHandler(this.Knob_ValueChanged);
             // 
             // label16
             // 
@@ -755,7 +791,6 @@
 
         internal System.Windows.Forms.Label Button1;
         internal System.Windows.Forms.Label Button2;
-        private System.Windows.Forms.NumericUpDown Fader1;
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label Button3;
         internal System.Windows.Forms.Label Button4;
@@ -775,36 +810,37 @@
         internal System.Windows.Forms.Label Button15;
         internal System.Windows.Forms.Label Button16;
         internal System.Windows.Forms.Label Button19;
-        private System.Windows.Forms.NumericUpDown Fader2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown Fader3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown Fader4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown Fader5;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown Fader6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown Fader7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown Fader8;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown Knob1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown Knob2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown Knob3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown Knob4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown Knob5;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown Knob6;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown Knob7;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown Knob8;
         private System.Windows.Forms.Label label16;
+        internal System.Windows.Forms.NumericUpDown Fader1;
+        internal System.Windows.Forms.NumericUpDown Fader2;
+        internal System.Windows.Forms.NumericUpDown Fader3;
+        internal System.Windows.Forms.NumericUpDown Fader4;
+        internal System.Windows.Forms.NumericUpDown Fader5;
+        internal System.Windows.Forms.NumericUpDown Fader6;
+        internal System.Windows.Forms.NumericUpDown Fader7;
+        internal System.Windows.Forms.NumericUpDown Fader8;
+        internal System.Windows.Forms.NumericUpDown Knob1;
+        internal System.Windows.Forms.NumericUpDown Knob2;
+        internal System.Windows.Forms.NumericUpDown Knob3;
+        internal System.Windows.Forms.NumericUpDown Knob4;
+        internal System.Windows.Forms.NumericUpDown Knob5;
+        internal System.Windows.Forms.NumericUpDown Knob6;
+        internal System.Windows.Forms.NumericUpDown Knob7;
+        internal System.Windows.Forms.NumericUpDown Knob8;
 
     }
 }
