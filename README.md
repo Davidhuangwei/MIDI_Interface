@@ -9,5 +9,4 @@ TO DO:
 
 1. Create documentation
 2. Update variable names to correspond to TFM algorithm
-3. Finish interface controls
-4. Gather variables together in LabView project
+3. Gather variables together in LabView project
