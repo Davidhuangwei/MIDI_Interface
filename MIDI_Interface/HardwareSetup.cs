@@ -17,8 +17,9 @@ namespace MIDI_Interface
         internal static OutputDevice BCF2000_o = null;   // MIDI output to send messages to BCF2000
         private static outputMessages outmess;         // output messages stored in this struct
         internal static bool ControlSender = false;    // Set true when handling MIDI messages recieved from controller
+        internal static bool FormSender = false;       // Set true when handling messages from Form
 
-        public HardwareSetup(InterfaceForm mainForm)
+        internal HardwareSetup(InterfaceForm mainForm)
         {
             inForm = mainForm;
         }
@@ -32,6 +33,7 @@ namespace MIDI_Interface
 
         public void initialise()
         {
+            parameters.printOut();
             if (InputDevice.DeviceCount <= inDeviceID)
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");
@@ -136,13 +138,20 @@ namespace MIDI_Interface
         {
             if (ControlSender == false)
             {
-                ChannelMessageBuilder builder = new ChannelMessageBuilder(); // build MIDI Message
-                builder.MidiChannel = 0; // Always channel 0
-                builder.Command = ChannelCommand.Controller; // Control message for knobs and faders
-                builder.Data1 = note;  // Control number
-                builder.Data2 = (int)velocity; // send the value from interface
-                builder.Build();
-                BCF2000_o.Send(builder.Result);
+                if (HardwareSetup.BCF2000_i != null)
+                {
+                    ChannelMessageBuilder builder = new ChannelMessageBuilder(); // build MIDI Message
+                    builder.MidiChannel = 0; // Always channel 0
+                    builder.Command = ChannelCommand.Controller; // Control message for knobs and faders
+                    builder.Data1 = note;  // Control number
+                    builder.Data2 = (int)velocity; // send the value from interface
+                    builder.Build();
+                    BCF2000_o.Send(builder.Result);
+                    if (FormSender == false)
+                    {
+                        inForm.setValue(note, (decimal)velocity);
+                    }
+                }
             }
         }
 
@@ -150,20 +159,27 @@ namespace MIDI_Interface
         {
             if (ControlSender == false)
             {
-                ChannelMessageBuilder builder = new ChannelMessageBuilder(); // build MIDI Message
-                builder.MidiChannel = 0; // Always channel 0
-                builder.Command = ChannelCommand.NoteOn; // NoteOn message for buttons
-                builder.Data1 = note;  // Note number
-                if (onoff)
+                if (HardwareSetup.BCF2000_i != null)
                 {
-                    builder.Data2 = 100; // send 100 if true
+                    ChannelMessageBuilder builder = new ChannelMessageBuilder(); // build MIDI Message
+                    builder.MidiChannel = 0; // Always channel 0
+                    builder.Command = ChannelCommand.NoteOn; // NoteOn message for buttons
+                    builder.Data1 = note;  // Note number
+                    if (onoff)
+                    {
+                        builder.Data2 = 100; // send 100 if true
+                    }
+                    else
+                    {
+                        builder.Data2 = 0;
+                    }
+                    builder.Build();
+                    BCF2000_o.Send(builder.Result);
+                    if (FormSender == false)
+                    {
+                        inForm.setButton(note, onoff);
+                    }
                 }
-                else
-                {
-                    builder.Data2 = 0;
-                }
-                builder.Build();
-                BCF2000_o.Send(builder.Result);
             }
         }
 
