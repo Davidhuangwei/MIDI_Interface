@@ -57,3 +57,22 @@ C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Deb
 C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
 C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.Properties.Resources.resources
 C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\x86\Debug\MIDI_Interface.csproj.GenerateResource.Cache
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.exe
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.pdb
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.Properties.Resources.resources
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\MIDI_Interface.exe.config
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\MIDI_Interface.exe
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\MIDI_Interface.pdb
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\Sanford.Collections.dll
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\Sanford.Multimedia.dll
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\Sanford.Multimedia.Midi.dll
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\Sanford.Multimedia.Timers.dll
+C:\Users\pjb13148\Downloads\MIDI_Interface\MIDI_Interface-master\MIDI_Interface\bin\Debug\Sanford.Threading.dll
+E:\Files\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe.config
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe.config

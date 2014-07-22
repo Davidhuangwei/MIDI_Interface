@@ -33,7 +33,6 @@ namespace MIDI_Interface
 
         public void initialise()
         {
-            parameters.printOut();
             if (InputDevice.DeviceCount <= inDeviceID)
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");

@@ -28,17 +28,17 @@ namespace MIDI_Interface
         private static NotifyIcon notifyIcon = null;   // System tray icon
         private HardwareSetup FormSetup; // Instance of hardware setup class
 
-/*       public static void returnMessages(out int chan, out int mess)
-        {
-            chan = outmess.Note;
-            mess = outmess.Mess;
-        }
-*/
+        /*       public static void returnMessages(out int chan, out int mess)
+                {
+                    chan = outmess.Note;
+                    mess = outmess.Mess;
+                }
+        */
 
 
         // Form Methods
 
-        public InterfaceForm() 
+        public InterfaceForm()
         {
             InitializeComponent(); // Initialise windows form
         }
@@ -47,6 +47,8 @@ namespace MIDI_Interface
         {
             SetUpTrayIcon();
             FormSetup = new HardwareSetup(this);
+            parameters.setForm(this);
+            parameters.loadScale();
             FormSetup.initialise();
             return;
         }
@@ -54,12 +56,13 @@ namespace MIDI_Interface
         protected override void OnClosed(EventArgs e) // When the form is closed, ensure device is stopped and close stream
         {
             FormSetup.release();
+            parameters.saveScale();
             base.OnClosed(e); // repeat as necessary
         }
 
 
         //System Tray icon methods
-        
+
         private void SetUpTrayIcon()  // sets up an icon for the program in the system tray
         {
             notifyIcon = new System.Windows.Forms.NotifyIcon(); // create system tray icon
@@ -154,7 +157,7 @@ namespace MIDI_Interface
         {
             Color C;
             if (onoff) { C = Color.Green; }
-            else{ C = Color.Red; }
+            else { C = Color.Red; }
 
             switch (note)
             {
@@ -254,7 +257,7 @@ namespace MIDI_Interface
                 }
                 HardwareSetup.FormSender = false;
             }
-            
+
         }
 
         private void Fader_ValueChanged(object sender, EventArgs e) // If fader value is changed
@@ -290,5 +293,25 @@ namespace MIDI_Interface
                 HardwareSetup.FormSender = false;
             }
         }
+
+        private void Pair_lo_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown dummy = (NumericUpDown)sender;
+            int index;
+            int.TryParse((string)dummy.Tag, out index);
+            parameters.setScale(index, (float)dummy.Value, parameters.knobScaleUpperBound[index]);
+        }
+
+        private void Pair_hi_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown dummy = (NumericUpDown)sender;
+            int index;
+            int.TryParse((string)dummy.Tag, out index);
+            parameters.setScale(index, parameters.knobScaleLowerBound[index], (float)dummy.Value);
+        }
+
+
+
+
     }
 }

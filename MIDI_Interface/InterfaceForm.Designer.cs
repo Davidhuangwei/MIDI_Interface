@@ -80,6 +80,47 @@
             this.label15 = new System.Windows.Forms.Label();
             this.Knob8 = new System.Windows.Forms.NumericUpDown();
             this.label16 = new System.Windows.Forms.Label();
+            this.Pair1_lo = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.Pair1_hi = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.Pair2_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair2_hi = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Pair3_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair3_hi = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.Pair4_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair4_hi = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.Pair5_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair5_hi = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Pair6_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair6_hi = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Pair7_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair7_hi = new System.Windows.Forms.NumericUpDown();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.Pair8_lo = new System.Windows.Forms.NumericUpDown();
+            this.Pair8_hi = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Fader1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader3)).BeginInit();
@@ -96,6 +137,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.Knob6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Knob7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Knob8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair1_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair1_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair2_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair2_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair3_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair3_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair4_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair4_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair5_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair5_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair6_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair6_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair7_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair7_hi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair8_lo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Button1
@@ -706,11 +764,684 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Knob 8";
             // 
+            // Pair1_lo
+            // 
+            this.Pair1_lo.DecimalPlaces = 2;
+            this.Pair1_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair1_lo.Location = new System.Drawing.Point(2, 33);
+            this.Pair1_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair1_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair1_lo.Name = "Pair1_lo";
+            this.Pair1_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair1_lo.TabIndex = 3;
+            this.Pair1_lo.Tag = "0";
+            this.Pair1_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(2, 17);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Lower Bound";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 4);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 13);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Pair 1 Scale";
+            // 
+            // Pair1_hi
+            // 
+            this.Pair1_hi.DecimalPlaces = 2;
+            this.Pair1_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair1_hi.Location = new System.Drawing.Point(2, 77);
+            this.Pair1_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair1_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair1_hi.Name = "Pair1_hi";
+            this.Pair1_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair1_hi.TabIndex = 3;
+            this.Pair1_hi.Tag = "0";
+            this.Pair1_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(2, 61);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Upper Bound";
+            // 
+            // Pair2_lo
+            // 
+            this.Pair2_lo.DecimalPlaces = 2;
+            this.Pair2_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair2_lo.Location = new System.Drawing.Point(78, 33);
+            this.Pair2_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair2_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair2_lo.Name = "Pair2_lo";
+            this.Pair2_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair2_lo.TabIndex = 3;
+            this.Pair2_lo.Tag = "1";
+            this.Pair2_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair2_hi
+            // 
+            this.Pair2_hi.DecimalPlaces = 2;
+            this.Pair2_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair2_hi.Location = new System.Drawing.Point(78, 77);
+            this.Pair2_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair2_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair2_hi.Name = "Pair2_hi";
+            this.Pair2_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair2_hi.TabIndex = 3;
+            this.Pair2_hi.Tag = "1";
+            this.Pair2_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(78, 17);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "Lower Bound";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(78, 61);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(70, 13);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Upper Bound";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(79, 4);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(76, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "Pair 2 Scale";
+            // 
+            // Pair3_lo
+            // 
+            this.Pair3_lo.DecimalPlaces = 2;
+            this.Pair3_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair3_lo.Location = new System.Drawing.Point(154, 33);
+            this.Pair3_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair3_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair3_lo.Name = "Pair3_lo";
+            this.Pair3_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair3_lo.TabIndex = 3;
+            this.Pair3_lo.Tag = "2";
+            this.Pair3_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair3_hi
+            // 
+            this.Pair3_hi.DecimalPlaces = 2;
+            this.Pair3_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair3_hi.Location = new System.Drawing.Point(154, 77);
+            this.Pair3_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair3_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair3_hi.Name = "Pair3_hi";
+            this.Pair3_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair3_hi.TabIndex = 3;
+            this.Pair3_hi.Tag = "2";
+            this.Pair3_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(154, 17);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 13);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Lower Bound";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(154, 61);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(70, 13);
+            this.label24.TabIndex = 4;
+            this.label24.Text = "Upper Bound";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(155, 4);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(76, 13);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Pair 3 Scale";
+            // 
+            // Pair4_lo
+            // 
+            this.Pair4_lo.DecimalPlaces = 2;
+            this.Pair4_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair4_lo.Location = new System.Drawing.Point(230, 33);
+            this.Pair4_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair4_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair4_lo.Name = "Pair4_lo";
+            this.Pair4_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair4_lo.TabIndex = 3;
+            this.Pair4_lo.Tag = "3";
+            this.Pair4_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair4_hi
+            // 
+            this.Pair4_hi.DecimalPlaces = 2;
+            this.Pair4_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair4_hi.Location = new System.Drawing.Point(230, 77);
+            this.Pair4_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair4_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair4_hi.Name = "Pair4_hi";
+            this.Pair4_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair4_hi.TabIndex = 3;
+            this.Pair4_hi.Tag = "3";
+            this.Pair4_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(230, 17);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(70, 13);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Lower Bound";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(230, 61);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(70, 13);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Upper Bound";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(231, 4);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(76, 13);
+            this.label28.TabIndex = 4;
+            this.label28.Text = "Pair 4 Scale";
+            // 
+            // Pair5_lo
+            // 
+            this.Pair5_lo.DecimalPlaces = 2;
+            this.Pair5_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair5_lo.Location = new System.Drawing.Point(308, 33);
+            this.Pair5_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair5_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair5_lo.Name = "Pair5_lo";
+            this.Pair5_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair5_lo.TabIndex = 3;
+            this.Pair5_lo.Tag = "4";
+            this.Pair5_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair5_hi
+            // 
+            this.Pair5_hi.DecimalPlaces = 2;
+            this.Pair5_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair5_hi.Location = new System.Drawing.Point(308, 77);
+            this.Pair5_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair5_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair5_hi.Name = "Pair5_hi";
+            this.Pair5_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair5_hi.TabIndex = 3;
+            this.Pair5_hi.Tag = "4";
+            this.Pair5_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(308, 17);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(70, 13);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Lower Bound";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(308, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(70, 13);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Upper Bound";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(309, 4);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(76, 13);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "Pair 5 Scale";
+            // 
+            // Pair6_lo
+            // 
+            this.Pair6_lo.DecimalPlaces = 2;
+            this.Pair6_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair6_lo.Location = new System.Drawing.Point(384, 33);
+            this.Pair6_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair6_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair6_lo.Name = "Pair6_lo";
+            this.Pair6_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair6_lo.TabIndex = 3;
+            this.Pair6_lo.Tag = "5";
+            this.Pair6_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair6_hi
+            // 
+            this.Pair6_hi.DecimalPlaces = 2;
+            this.Pair6_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair6_hi.Location = new System.Drawing.Point(384, 77);
+            this.Pair6_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair6_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair6_hi.Name = "Pair6_hi";
+            this.Pair6_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair6_hi.TabIndex = 3;
+            this.Pair6_hi.Tag = "5";
+            this.Pair6_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(384, 17);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(70, 13);
+            this.label32.TabIndex = 4;
+            this.label32.Text = "Lower Bound";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(384, 61);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(70, 13);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Upper Bound";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(385, 4);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(76, 13);
+            this.label34.TabIndex = 4;
+            this.label34.Text = "Pair 6 Scale";
+            // 
+            // Pair7_lo
+            // 
+            this.Pair7_lo.DecimalPlaces = 2;
+            this.Pair7_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair7_lo.Location = new System.Drawing.Point(460, 33);
+            this.Pair7_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair7_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair7_lo.Name = "Pair7_lo";
+            this.Pair7_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair7_lo.TabIndex = 3;
+            this.Pair7_lo.Tag = "6";
+            this.Pair7_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair7_hi
+            // 
+            this.Pair7_hi.DecimalPlaces = 2;
+            this.Pair7_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair7_hi.Location = new System.Drawing.Point(460, 77);
+            this.Pair7_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair7_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair7_hi.Name = "Pair7_hi";
+            this.Pair7_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair7_hi.TabIndex = 3;
+            this.Pair7_hi.Tag = "6";
+            this.Pair7_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(460, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(70, 13);
+            this.label35.TabIndex = 4;
+            this.label35.Text = "Lower Bound";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(460, 61);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(70, 13);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Upper Bound";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(461, 4);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(76, 13);
+            this.label37.TabIndex = 4;
+            this.label37.Text = "Pair 7 Scale";
+            // 
+            // Pair8_lo
+            // 
+            this.Pair8_lo.DecimalPlaces = 2;
+            this.Pair8_lo.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair8_lo.Location = new System.Drawing.Point(536, 33);
+            this.Pair8_lo.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair8_lo.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair8_lo.Name = "Pair8_lo";
+            this.Pair8_lo.Size = new System.Drawing.Size(70, 20);
+            this.Pair8_lo.TabIndex = 3;
+            this.Pair8_lo.Tag = "7";
+            this.Pair8_lo.ValueChanged += new System.EventHandler(this.Pair_lo_ValueChanged);
+            // 
+            // Pair8_hi
+            // 
+            this.Pair8_hi.DecimalPlaces = 2;
+            this.Pair8_hi.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.Pair8_hi.Location = new System.Drawing.Point(536, 77);
+            this.Pair8_hi.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.Pair8_hi.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            -2147483648});
+            this.Pair8_hi.Name = "Pair8_hi";
+            this.Pair8_hi.Size = new System.Drawing.Size(70, 20);
+            this.Pair8_hi.TabIndex = 3;
+            this.Pair8_hi.Tag = "7";
+            this.Pair8_hi.ValueChanged += new System.EventHandler(this.Pair_hi_ValueChanged);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(536, 17);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(70, 13);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "Lower Bound";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(536, 61);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(70, 13);
+            this.label39.TabIndex = 4;
+            this.label39.Text = "Upper Bound";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(537, 4);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(76, 13);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "Pair 8 Scale";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label40);
+            this.panel1.Controls.Add(this.Pair1_lo);
+            this.panel1.Controls.Add(this.label37);
+            this.panel1.Controls.Add(this.Pair2_lo);
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.Pair3_lo);
+            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.Pair4_lo);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.Pair5_lo);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.Pair6_lo);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.Pair7_lo);
+            this.panel1.Controls.Add(this.Pair8_lo);
+            this.panel1.Controls.Add(this.label39);
+            this.panel1.Controls.Add(this.Pair1_hi);
+            this.panel1.Controls.Add(this.label36);
+            this.panel1.Controls.Add(this.Pair2_hi);
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.Pair3_hi);
+            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.Pair4_hi);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.Pair5_hi);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.Pair6_hi);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.Pair7_hi);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.Pair8_hi);
+            this.panel1.Controls.Add(this.label38);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label35);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Location = new System.Drawing.Point(10, 163);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(613, 109);
+            this.panel1.TabIndex = 5;
+            // 
             // InterfaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 151);
+            this.ClientSize = new System.Drawing.Size(635, 284);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -782,6 +1513,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.Knob6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Knob7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Knob8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair1_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair1_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair2_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair2_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair3_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair3_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair4_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair4_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair5_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair5_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair6_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair6_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair7_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair7_hi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair8_lo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -841,6 +1590,47 @@
         internal System.Windows.Forms.NumericUpDown Knob6;
         internal System.Windows.Forms.NumericUpDown Knob7;
         internal System.Windows.Forms.NumericUpDown Knob8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        internal System.Windows.Forms.NumericUpDown Pair1_lo;
+        internal System.Windows.Forms.NumericUpDown Pair1_hi;
+        internal System.Windows.Forms.NumericUpDown Pair2_lo;
+        internal System.Windows.Forms.NumericUpDown Pair2_hi;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        internal System.Windows.Forms.NumericUpDown Pair3_lo;
+        internal System.Windows.Forms.NumericUpDown Pair3_hi;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        internal System.Windows.Forms.NumericUpDown Pair4_lo;
+        internal System.Windows.Forms.NumericUpDown Pair4_hi;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        internal System.Windows.Forms.NumericUpDown Pair5_lo;
+        internal System.Windows.Forms.NumericUpDown Pair5_hi;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        internal System.Windows.Forms.NumericUpDown Pair6_lo;
+        internal System.Windows.Forms.NumericUpDown Pair6_hi;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        internal System.Windows.Forms.NumericUpDown Pair7_lo;
+        internal System.Windows.Forms.NumericUpDown Pair7_hi;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        internal System.Windows.Forms.NumericUpDown Pair8_lo;
+        internal System.Windows.Forms.NumericUpDown Pair8_hi;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Panel panel1;
 
     }
 }
