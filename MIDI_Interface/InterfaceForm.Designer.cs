@@ -121,6 +121,22 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PairedOut1 = new System.Windows.Forms.NumericUpDown();
+            this.label41 = new System.Windows.Forms.Label();
+            this.PairedOut2 = new System.Windows.Forms.NumericUpDown();
+            this.label42 = new System.Windows.Forms.Label();
+            this.PairedOut3 = new System.Windows.Forms.NumericUpDown();
+            this.label43 = new System.Windows.Forms.Label();
+            this.PairedOut4 = new System.Windows.Forms.NumericUpDown();
+            this.label44 = new System.Windows.Forms.Label();
+            this.PairedOut5 = new System.Windows.Forms.NumericUpDown();
+            this.label45 = new System.Windows.Forms.Label();
+            this.PairedOut6 = new System.Windows.Forms.NumericUpDown();
+            this.label46 = new System.Windows.Forms.Label();
+            this.PairedOut7 = new System.Windows.Forms.NumericUpDown();
+            this.label47 = new System.Windows.Forms.Label();
+            this.PairedOut8 = new System.Windows.Forms.NumericUpDown();
+            this.label48 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fader1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader3)).BeginInit();
@@ -154,6 +170,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_lo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut8)).BeginInit();
             this.SuspendLayout();
             // 
             // Button1
@@ -1436,11 +1460,307 @@
             this.panel1.Size = new System.Drawing.Size(613, 109);
             this.panel1.TabIndex = 5;
             // 
+            // PairedOut1
+            // 
+            this.PairedOut1.DecimalPlaces = 2;
+            this.PairedOut1.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut1.InterceptArrowKeys = false;
+            this.PairedOut1.Location = new System.Drawing.Point(14, 309);
+            this.PairedOut1.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut1.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut1.Name = "PairedOut1";
+            this.PairedOut1.ReadOnly = true;
+            this.PairedOut1.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut1.TabIndex = 1;
+            this.PairedOut1.TabStop = false;
+            this.PairedOut1.Tag = "0";
+            this.PairedOut1.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(14, 290);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(69, 13);
+            this.label41.TabIndex = 2;
+            this.label41.Text = "Pair 1 Output";
+            // 
+            // PairedOut2
+            // 
+            this.PairedOut2.DecimalPlaces = 2;
+            this.PairedOut2.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut2.InterceptArrowKeys = false;
+            this.PairedOut2.Location = new System.Drawing.Point(89, 309);
+            this.PairedOut2.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut2.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut2.Name = "PairedOut2";
+            this.PairedOut2.ReadOnly = true;
+            this.PairedOut2.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut2.TabIndex = 1;
+            this.PairedOut2.TabStop = false;
+            this.PairedOut2.Tag = "0";
+            this.PairedOut2.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(89, 290);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(69, 13);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "Pair 2 Output";
+            // 
+            // PairedOut3
+            // 
+            this.PairedOut3.DecimalPlaces = 2;
+            this.PairedOut3.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut3.InterceptArrowKeys = false;
+            this.PairedOut3.Location = new System.Drawing.Point(165, 309);
+            this.PairedOut3.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut3.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut3.Name = "PairedOut3";
+            this.PairedOut3.ReadOnly = true;
+            this.PairedOut3.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut3.TabIndex = 1;
+            this.PairedOut3.TabStop = false;
+            this.PairedOut3.Tag = "0";
+            this.PairedOut3.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(165, 290);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(69, 13);
+            this.label43.TabIndex = 2;
+            this.label43.Text = "Pair 3 Output";
+            // 
+            // PairedOut4
+            // 
+            this.PairedOut4.DecimalPlaces = 2;
+            this.PairedOut4.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut4.InterceptArrowKeys = false;
+            this.PairedOut4.Location = new System.Drawing.Point(244, 309);
+            this.PairedOut4.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut4.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut4.Name = "PairedOut4";
+            this.PairedOut4.ReadOnly = true;
+            this.PairedOut4.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut4.TabIndex = 1;
+            this.PairedOut4.TabStop = false;
+            this.PairedOut4.Tag = "0";
+            this.PairedOut4.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(244, 290);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(69, 13);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "Pair 4 Output";
+            // 
+            // PairedOut5
+            // 
+            this.PairedOut5.DecimalPlaces = 2;
+            this.PairedOut5.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut5.InterceptArrowKeys = false;
+            this.PairedOut5.Location = new System.Drawing.Point(319, 309);
+            this.PairedOut5.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut5.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut5.Name = "PairedOut5";
+            this.PairedOut5.ReadOnly = true;
+            this.PairedOut5.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut5.TabIndex = 1;
+            this.PairedOut5.TabStop = false;
+            this.PairedOut5.Tag = "0";
+            this.PairedOut5.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(319, 290);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(69, 13);
+            this.label45.TabIndex = 2;
+            this.label45.Text = "Pair 5 Output";
+            // 
+            // PairedOut6
+            // 
+            this.PairedOut6.DecimalPlaces = 2;
+            this.PairedOut6.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut6.InterceptArrowKeys = false;
+            this.PairedOut6.Location = new System.Drawing.Point(398, 309);
+            this.PairedOut6.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut6.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut6.Name = "PairedOut6";
+            this.PairedOut6.ReadOnly = true;
+            this.PairedOut6.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut6.TabIndex = 1;
+            this.PairedOut6.TabStop = false;
+            this.PairedOut6.Tag = "0";
+            this.PairedOut6.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(398, 290);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(69, 13);
+            this.label46.TabIndex = 2;
+            this.label46.Text = "Pair 6 Output";
+            // 
+            // PairedOut7
+            // 
+            this.PairedOut7.DecimalPlaces = 2;
+            this.PairedOut7.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut7.InterceptArrowKeys = false;
+            this.PairedOut7.Location = new System.Drawing.Point(471, 309);
+            this.PairedOut7.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut7.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut7.Name = "PairedOut7";
+            this.PairedOut7.ReadOnly = true;
+            this.PairedOut7.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut7.TabIndex = 1;
+            this.PairedOut7.TabStop = false;
+            this.PairedOut7.Tag = "0";
+            this.PairedOut7.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(471, 290);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(69, 13);
+            this.label47.TabIndex = 2;
+            this.label47.Text = "Pair 7 Output";
+            // 
+            // PairedOut8
+            // 
+            this.PairedOut8.DecimalPlaces = 2;
+            this.PairedOut8.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.PairedOut8.InterceptArrowKeys = false;
+            this.PairedOut8.Location = new System.Drawing.Point(546, 309);
+            this.PairedOut8.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PairedOut8.Minimum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            -2147483648});
+            this.PairedOut8.Name = "PairedOut8";
+            this.PairedOut8.ReadOnly = true;
+            this.PairedOut8.Size = new System.Drawing.Size(69, 20);
+            this.PairedOut8.TabIndex = 1;
+            this.PairedOut8.TabStop = false;
+            this.PairedOut8.Tag = "0";
+            this.PairedOut8.ValueChanged += new System.EventHandler(this.Output_ValueChanged);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(546, 290);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(69, 13);
+            this.label48.TabIndex = 2;
+            this.label48.Text = "Pair 8 Output";
+            // 
             // InterfaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 284);
+            this.ClientSize = new System.Drawing.Size(635, 350);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -1457,6 +1777,14 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.label47);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.label44);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label41);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Fader8);
             this.Controls.Add(this.Fader7);
@@ -1473,6 +1801,14 @@
             this.Controls.Add(this.Knob3);
             this.Controls.Add(this.Knob2);
             this.Controls.Add(this.Knob1);
+            this.Controls.Add(this.PairedOut8);
+            this.Controls.Add(this.PairedOut7);
+            this.Controls.Add(this.PairedOut6);
+            this.Controls.Add(this.PairedOut5);
+            this.Controls.Add(this.PairedOut4);
+            this.Controls.Add(this.PairedOut3);
+            this.Controls.Add(this.PairedOut2);
+            this.Controls.Add(this.PairedOut1);
             this.Controls.Add(this.Fader1);
             this.Controls.Add(this.Button20);
             this.Controls.Add(this.Button18);
@@ -1531,6 +1867,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PairedOut8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1631,6 +1975,22 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel1;
+        internal System.Windows.Forms.NumericUpDown PairedOut1;
+        private System.Windows.Forms.Label label41;
+        internal System.Windows.Forms.NumericUpDown PairedOut2;
+        private System.Windows.Forms.Label label42;
+        internal System.Windows.Forms.NumericUpDown PairedOut3;
+        private System.Windows.Forms.Label label43;
+        internal System.Windows.Forms.NumericUpDown PairedOut4;
+        private System.Windows.Forms.Label label44;
+        internal System.Windows.Forms.NumericUpDown PairedOut5;
+        private System.Windows.Forms.Label label45;
+        internal System.Windows.Forms.NumericUpDown PairedOut6;
+        private System.Windows.Forms.Label label46;
+        internal System.Windows.Forms.NumericUpDown PairedOut7;
+        private System.Windows.Forms.Label label47;
+        internal System.Windows.Forms.NumericUpDown PairedOut8;
+        private System.Windows.Forms.Label label48;
 
     }
 }

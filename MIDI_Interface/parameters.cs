@@ -11,10 +11,44 @@ namespace MIDI_Interface
 {
     public static class parameters
     {
+
+        // Contains all variables and methods for changing variable values:
+        // -----------------------------------------
+        // PUBLIC METHODS:
+        //=================
+        // loadScale() - load scaling parameters from Properties.Settings
+        // saveScale() - save any changed scaling parameters to Properties.Settings
+        // setScale(int pair, float low, float, hi) - sets the scaling parameters for a fader/knob pair
+        // setX(int index, float val) - sets the value of Control[index] to val, also updates device and form if necessary,
+        //                              changes in Control[] affect Faders[] and/or Knobs[] as well when performed with this
+        //                              method
+        // setY(int index, bool val) - Changes Button[index] to val, also updates form and device.
+
+        // PUBLIC VARIABLES:
+        //=================
+        // float Control[16] - Contains unscaled control values, 0 to 7 correspond to the faders, 8 to 15 the knobs (left to right)
+        // bool Button[20] - Contains button values, on or off. buttons go left to right then top to bottom so 0 to 7 = top row,
+        //                   8 to 15 = second row, and 16 to 19 are the buttons at the bottom right of the controller
+        // float Faders[8] - Contains weighted fader values, taking into account fader/knob pairs and scale adjustments
+        // float Knobs[8] - Contains weighted knob values, taking into account knob value and scale adjustments
+
+        // INTERNAL METHODS:
+        //=================
+        // setForm(InterfaceForm mainForm) - as in HardwareSetup
+
         private static Properties.Settings My = new Properties.Settings();
         private static InterfaceForm inForm;
 
-        internal static void setForm(InterfaceForm mainForm)
+        public static float[] Control = new float[16];
+        public static bool[] Button = new bool[20];
+
+        public static float[] Faders = new float[8];
+        public static float[] Knobs = new float[8];
+
+        internal static float[] ScaleUpperBound = new float[8];
+        internal static float[] ScaleLowerBound = new float[8];
+
+        internal static void setForm(InterfaceForm mainForm) // sets inForm to the current form
         {
             inForm = mainForm;
         }
@@ -23,83 +57,76 @@ namespace MIDI_Interface
         {
 
             for (int i = 0; i < 8; i++)
-                float.TryParse(My.scaling_hi[i], out knobScaleUpperBound[i]);
+                float.TryParse(My.scaling_hi[i], out ScaleUpperBound[i]);
 
             for (int i = 0; i < 8; i++)
-                float.TryParse(My.scaling_lo[i], out knobScaleLowerBound[i]);
+                float.TryParse(My.scaling_lo[i], out ScaleLowerBound[i]);
 
             for (int i = 0; i < 8; i++)
-                setScale(i, knobScaleLowerBound[i], knobScaleUpperBound[i]);
+                setScale(i, ScaleLowerBound[i], ScaleUpperBound[i]);
 
         }
 
-        public static void saveScale()
+        public static void saveScale() // Saves all scaling parameters
         {
 
             StringCollection scale = new StringCollection();
             for (int i = 0; i < 8; i++)
-                scale.Add(knobScaleLowerBound[i].ToString());
+                scale.Add(ScaleLowerBound[i].ToString());
             My.scaling_lo = scale;
             scale = null;
             scale = new StringCollection();
             for (int i = 0; i < 8; i++)
-                scale.Add(knobScaleUpperBound[i].ToString());
+                scale.Add(ScaleUpperBound[i].ToString());
             My.scaling_hi = scale;
 
             My.Save();
         }
 
-        public static float[] Control = new float[16];
-        public static bool[] Button = new bool[20];
-
-        public static float[] Faders = new float[8];
-        public static float[] Knobs = new float[8];
-        public static float[] Pairs = new float[8];
-
-        internal static float[] knobScaleUpperBound = new float[8];
-        internal static float[] knobScaleLowerBound = new float[8];
-
         public static void setScale(int pair, float low, float hi) // Set the scale of a fader/knob pair
         {
-            knobScaleLowerBound[pair] = low;
-            knobScaleUpperBound[pair] = hi;
+            ScaleLowerBound[pair] = low;
+            ScaleUpperBound[pair] = hi;
 
-            switch (pair)
+            if (inForm != null)
             {
-                case 0:
-                    inForm.Pair1_lo.Value = (Decimal)low;
-                    inForm.Pair1_hi.Value = (Decimal)hi;
-                    break;
-                case 1:
-                    inForm.Pair2_lo.Value = (Decimal)low;
-                    inForm.Pair2_hi.Value = (Decimal)hi;
-                    break;
-                case 2:
-                    inForm.Pair3_lo.Value = (Decimal)low;
-                    inForm.Pair3_hi.Value = (Decimal)hi;
-                    break;
-                case 3:
-                    inForm.Pair4_lo.Value = (Decimal)low;
-                    inForm.Pair4_hi.Value = (Decimal)hi;
-                    break;
-                case 4:
-                    inForm.Pair5_lo.Value = (Decimal)low;
-                    inForm.Pair5_hi.Value = (Decimal)hi;
-                    break;
-                case 5:
-                    inForm.Pair6_lo.Value = (Decimal)low;
-                    inForm.Pair6_hi.Value = (Decimal)hi;
-                    break;
-                case 6:
-                    inForm.Pair7_lo.Value = (Decimal)low;
-                    inForm.Pair7_hi.Value = (Decimal)hi;
-                    break;
-                case 7:
-                    inForm.Pair8_lo.Value = (Decimal)low;
-                    inForm.Pair8_hi.Value = (Decimal)hi;
-                    break;
-                default:
-                    break;
+                switch (pair)
+                {
+                    case 0:
+                        inForm.Pair1_lo.Value = (Decimal)low;
+                        inForm.Pair1_hi.Value = (Decimal)hi;
+                        break;
+                    case 1:
+                        inForm.Pair2_lo.Value = (Decimal)low;
+                        inForm.Pair2_hi.Value = (Decimal)hi;
+                        break;
+                    case 2:
+                        inForm.Pair3_lo.Value = (Decimal)low;
+                        inForm.Pair3_hi.Value = (Decimal)hi;
+                        break;
+                    case 3:
+                        inForm.Pair4_lo.Value = (Decimal)low;
+                        inForm.Pair4_hi.Value = (Decimal)hi;
+                        break;
+                    case 4:
+                        inForm.Pair5_lo.Value = (Decimal)low;
+                        inForm.Pair5_hi.Value = (Decimal)hi;
+                        break;
+                    case 5:
+                        inForm.Pair6_lo.Value = (Decimal)low;
+                        inForm.Pair6_hi.Value = (Decimal)hi;
+                        break;
+                    case 6:
+                        inForm.Pair7_lo.Value = (Decimal)low;
+                        inForm.Pair7_hi.Value = (Decimal)hi;
+                        break;
+                    case 7:
+                        inForm.Pair8_lo.Value = (Decimal)low;
+                        inForm.Pair8_hi.Value = (Decimal)hi;
+                        break;
+                    default:
+                        break;
+                }
             }
 
         }
@@ -114,17 +141,21 @@ namespace MIDI_Interface
 
             if (index < 8)
             {
-                float increment = ((knobScaleUpperBound[index] - knobScaleLowerBound[index]) / (float)127.0) / (float)127.0;
-                Faders[index] = Knobs[index] + (increment * val);
+                float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
+                Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
+                increment /= (float)127.0;
+                Faders[index] = Knobs[index] + (increment * Control[index]);
             }
             else
             {
-                float increment = (knobScaleUpperBound[index - 8] - knobScaleLowerBound[index - 8]) / (float)127.0;
-                Knobs[index - 8] = knobScaleLowerBound[index - 8] + (increment * val);
+                index -= 8;
+                float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
+                Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
+                increment /= (float)127.0;
+                Faders[index] = Knobs[index] + (increment * Control[index]);
             }
-
-
-
+            if (inForm != null)
+                inForm.ChangePair(index, Faders[index]);
         }
 
         public static void setY(int index, bool val) // Set the value of a button
@@ -136,6 +167,8 @@ namespace MIDI_Interface
                 HardwareSetup.noteMess(index, val);
             }
         }
+
+
 
     }
 }

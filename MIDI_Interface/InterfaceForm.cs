@@ -16,19 +16,46 @@ using System.Text.RegularExpressions;
 
 namespace MIDI_Interface
 {
-    internal struct outputMessages // Output messages struct containing the note and velocity
-    {
-        public int Note;        // MIDI Note Value
-        public int Mess;        // Velocity of MIDI Note
-        public bool isCC;       // True for Control Change or false for NoteOn message
-    }
-
     public partial class InterfaceForm : Form
     {
-        private static NotifyIcon notifyIcon = null;   // System tray icon
-        private HardwareSetup FormSetup; // Instance of hardware setup class
+        // Contains all software interface related methods and variables:
+        // -----------------------------------------
+        // PUBLIC METHODS:
+        //=================
+        // InterfaceForm() - initialises form.
 
-        /*       public static void returnMessages(out int chan, out int mess)
+        // INTERNAL METHODS:
+        //=================
+        // setValue(int note, decimal value) - changes the value of a knob/fader on the interface
+        // setButton(int note, bool onoff) -  changes a button from on to off and vice versa depending on received value
+        // ChangePair(int index, float val) - Changes the value of the output pair numerical slider, indicated by index, to val
+
+        // PRIVATE METHODS:
+        //=================
+        // SetUpTrayIcon() - Sets up the taskbar icon for the form
+        // notifyIcon_Click(object sender, EventArgs e) - Called when the icon is clicked, shows the window and hides icon
+        // Form_Resize(object sender, EventArgs e) - called when form is resized, checks to see if it's minimised and if it is
+        //                                           shows tray icon and hides form
+        // Button_Click(object sender, EventArgs e) - called when a button on the interface is clicked, changes value on
+        //                                            interface and controller
+        // Fader_ValueChanged(object sender, EventArgs e) - As with Button_Click, except for when a fader's value is changed
+        //                                                  on the form
+        // Knob_ValueChanged(object sender, EventArgs e) - As with Fader_ValueChanged except for the knob number boxes
+        // Pair_lo_ValueChanged(object sender, EventArgs e) - As with Fader/Knob except for low scaling boxes
+        // Pair_hi_ValueChanged(object sender, EventArgs e) - As with Fader/Knob except for high scaling boxes
+        // Output_ValueChanged(object sender, EventArgs e) - As with Fader/Knob except for Paired Output boxes,
+        //                                                   currently does nothing
+
+        // OVERRIDEN METHODS:
+        //=================
+        // OnLoad(EventArgs e) - Called on Form Load, calls basic setup functions for hardware and software, reloads recent preset
+        // OnClosed(EventArgs e) - Called when form is closed, releases resources and saves scaling presets
+
+
+        private static NotifyIcon notifyIcon = null;   // System tray icon
+        private HardwareSetup FormSetup; // Null instance of hardware setup class
+
+        /*       public static void returnMessages(out int chan, out int mess) // Formerly used to output values to Matlab
                 {
                     chan = outmess.Note;
                     mess = outmess.Mess;
@@ -43,7 +70,7 @@ namespace MIDI_Interface
             InitializeComponent(); // Initialise windows form
         }
 
-        protected override void OnLoad(EventArgs e) // On form load check for input devices
+        protected override void OnLoad(EventArgs e) // On form load check for and set up input devices
         {
             SetUpTrayIcon();
             FormSetup = new HardwareSetup(this);
@@ -227,8 +254,42 @@ namespace MIDI_Interface
             }
         }
 
+        internal void ChangePair(int index, float val)
+        {
+            switch (index)
+            {
+                case 0:
+                    PairedOut1.Value = (decimal)val;
+                    break;
+                case 1:
+                    PairedOut2.Value = (decimal)val;
+                    break;
+                case 2:
+                    PairedOut3.Value = (decimal)val;
+                    break;
+                case 3:
+                    PairedOut4.Value = (decimal)val;
+                    break;
+                case 4:
+                    PairedOut5.Value = (decimal)val;
+                    break;
+                case 5:
+                    PairedOut6.Value = (decimal)val;
+                    break;
+                case 6:
+                    PairedOut7.Value = (decimal)val;
+                    break;
+                case 7:
+                    PairedOut8.Value = (decimal)val;
+                    break;
+                default:
+                    break;
+            }
 
-        // On-click event handlers for faders, knobs and buttons
+        }
+
+
+        // On-click event handlers for faders, knobs and buttons, etc.
 
         private void Button_Click(object sender, EventArgs e) // When button clicked on interface
         {
@@ -299,7 +360,7 @@ namespace MIDI_Interface
             NumericUpDown dummy = (NumericUpDown)sender;
             int index;
             int.TryParse((string)dummy.Tag, out index);
-            parameters.setScale(index, (float)dummy.Value, parameters.knobScaleUpperBound[index]);
+            parameters.setScale(index, (float)dummy.Value, parameters.ScaleUpperBound[index]);
         }
 
         private void Pair_hi_ValueChanged(object sender, EventArgs e)
@@ -307,10 +368,16 @@ namespace MIDI_Interface
             NumericUpDown dummy = (NumericUpDown)sender;
             int index;
             int.TryParse((string)dummy.Tag, out index);
-            parameters.setScale(index, parameters.knobScaleLowerBound[index], (float)dummy.Value);
+            parameters.setScale(index, parameters.ScaleLowerBound[index], (float)dummy.Value);
         }
 
-
+        private void Output_ValueChanged(object sender, EventArgs e) // Would handle output value changes
+        {
+            //NumericUpDown dummy = (NumericUpDown)sender;
+            //int index;
+            //int.TryParse((string)dummy.Tag, out index);
+            //parameters.changeOutput(index, (float)dummy.Value);
+        }
 
 
     }

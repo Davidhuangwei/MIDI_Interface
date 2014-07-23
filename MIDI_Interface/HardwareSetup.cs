@@ -7,8 +7,34 @@ using System.Threading;
 
 namespace MIDI_Interface
 {
+    internal struct outputMessages // Output messages struct containing the note and velocity
+    {
+        internal int Note;        // MIDI Note Value
+        internal int Mess;        // Velocity of MIDI Note
+        internal bool isCC;       // True for Control Change or false for NoteOn message
+    }
     public class HardwareSetup
     {
+        // Contains all hardware related methods and variables:
+        // -----------------------------------------
+        // PUBLIC METHODS:
+        //=================
+        // initialise() - sets up MIDI device for sending and receiving messages
+        // release() - disposes of all MIDI device variables
+
+        // INTERNAL METHODS:
+        //=================
+        // HardwareSetup(InterfaceForm mainForm) - sets static declaration of inForm to the current form
+        // controlMess(int note, float velocity) - sends a control message to the MIDI device
+        // noteMess(int note, bool onoff) - sends a NoteOn message to the MIDI device
+
+        // PRIVATE METHODS:
+        //=================
+        // start() - begins BCF2000 recording input MIDI messages
+        // HandleChannelMessageReceived() - Event handler for MIDI messages received from MIDI devices
+        // sortOutmess(outputMessages mess) - sorts MIDI messages for the adjustment of parameters and form values
+
+
         private static ChannelCommand n = ChannelCommand.NoteOn;
         private static InterfaceForm inForm;
         private static SynchronizationContext context; // Synchronisation context for syncing form
@@ -19,21 +45,21 @@ namespace MIDI_Interface
         internal static bool ControlSender = false;    // Set true when handling MIDI messages recieved from controller
         internal static bool FormSender = false;       // Set true when handling messages from Form
 
-        internal HardwareSetup(InterfaceForm mainForm)
+        internal HardwareSetup(InterfaceForm mainForm) // For purposes of changing form values from this class
         {
             inForm = mainForm;
         }
 
-        private static void start() // Initialises BCF2000 data stream
+        private static void start() // Starts BCF2000 data stream
         {
-            BCF2000_i.SysExBufferSize = 4096;
-            BCF2000_i.StartRecording();
+            BCF2000_i.SysExBufferSize = 4096; // In case System Exclusive message buffer isn't initialised
+            BCF2000_i.StartRecording();       // Starts recording to ensure messages are received
             return;
         }
 
-        public void initialise()
+        public void initialise() // Initialises device for input and output when called
         {
-            if (InputDevice.DeviceCount <= inDeviceID)
+            if (InputDevice.DeviceCount <= inDeviceID) // If there aren't any connected devices
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");
             }
@@ -87,16 +113,16 @@ namespace MIDI_Interface
 
         }
 
-        private void HandleChannelMessageReceived(object sender, ChannelMessageEventArgs e)
+        private void HandleChannelMessageReceived(object sender, ChannelMessageEventArgs e) // Event Handler for MIDI messages
         {
-            context.Post(delegate(object dummy)
-            {
-                /* System.Diagnostics.Debug.WriteLine(
-                     e.Message.Command.ToString() + '\t' + '\t' +
-                     e.Message.MidiChannel.ToString() + '\t' +
-                     e.Message.Data1.ToString() + '\t' +
-                     e.Message.Data2.ToString());*/
-            }, null);                                  // Writes all channel messages to output console
+            // context.Post(delegate(object dummy)
+            // {
+            /* System.Diagnostics.Debug.WriteLine(
+                 e.Message.Command.ToString() + '\t' + '\t' +
+                 e.Message.MidiChannel.ToString() + '\t' +
+                 e.Message.Data1.ToString() + '\t' +
+                 e.Message.Data2.ToString());*/
+            // }, null);                                  // Writes all channel messages to output console
             outmess.Note = e.Message.Data1; // Insert channel messages to variable struct: Note
             outmess.Mess = e.Message.Data2; // Velocity
             if (e.Message.Command.Equals(n))
@@ -133,7 +159,7 @@ namespace MIDI_Interface
             return;
         }
 
-        internal static void controlMess(int note, float velocity)
+        internal static void controlMess(int note, float velocity) // Sends a Control message to the MIDI device
         {
             if (ControlSender == false)
             {
@@ -148,13 +174,14 @@ namespace MIDI_Interface
                     BCF2000_o.Send(builder.Result);
                     if (FormSender == false)
                     {
-                        inForm.setValue(note, (decimal)velocity);
+                        if (inForm != null)
+                            inForm.setValue(note, (decimal)velocity);
                     }
                 }
             }
         }
 
-        internal static void noteMess(int note, bool onoff)
+        internal static void noteMess(int note, bool onoff) // Sends a NoteOn message to the MIDI device
         {
             if (ControlSender == false)
             {
@@ -176,22 +203,24 @@ namespace MIDI_Interface
                     BCF2000_o.Send(builder.Result);
                     if (FormSender == false)
                     {
-                        inForm.setButton(note, onoff);
+                        if (inForm != null)
+                            inForm.setButton(note, onoff);
                     }
                 }
             }
         }
 
-        private void sortOutmess(outputMessages mess) // Will set variables for TFM to be read outside
-        {                                             // of program whenever new message is received
-            if (mess.isCC)
+        private void sortOutmess(outputMessages mess) // Sorts MIDI messages into variables in the parameters class
+        {
+            if (mess.isCC) // If the current message is a control change
             {
-                float velocity = mess.Mess;
-                inForm.setValue(mess.Note, (decimal)velocity);
-                if (mess.Note <= 15)
+                float velocity = mess.Mess;         // Value of control change
+                if (inForm != null)
+                    inForm.setValue(mess.Note, (decimal)velocity); // Change form control if form exists
+                if (mess.Note <= 15) // If note is within valid range
                 {
-                    parameters.setX(mess.Note, velocity);
-                    controlMess(mess.Note, velocity);
+                    parameters.setX(mess.Note, velocity); // change value in parameters class
+                    controlMess(mess.Note, velocity);     // Depending on sender, changes controller values
                 }
                 else
                 {
@@ -204,7 +233,8 @@ namespace MIDI_Interface
                 {
                     bool onoff = mess.Mess > 0;
                     parameters.setY(mess.Note, onoff);
-                    inForm.setButton(mess.Note, onoff);
+                    if (inForm != null)
+                        inForm.setButton(mess.Note, onoff);
                     noteMess(mess.Note, onoff);
                 }
                 else
