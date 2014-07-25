@@ -137,6 +137,7 @@
             this.label47 = new System.Windows.Forms.Label();
             this.PairedOut8 = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
+            this.StatusLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Fader1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader3)).BeginInit();
@@ -302,7 +303,7 @@
             // Button17
             // 
             this.Button17.BackColor = System.Drawing.Color.Red;
-            this.Button17.Location = new System.Drawing.Point(510, 108);
+            this.Button17.Location = new System.Drawing.Point(500, 108);
             this.Button17.Name = "Button17";
             this.Button17.Size = new System.Drawing.Size(54, 13);
             this.Button17.TabIndex = 0;
@@ -434,7 +435,7 @@
             // Button19
             // 
             this.Button19.BackColor = System.Drawing.Color.Red;
-            this.Button19.Location = new System.Drawing.Point(510, 127);
+            this.Button19.Location = new System.Drawing.Point(500, 127);
             this.Button19.Name = "Button19";
             this.Button19.Size = new System.Drawing.Size(54, 13);
             this.Button19.TabIndex = 0;
@@ -1756,11 +1757,25 @@
             this.label48.TabIndex = 2;
             this.label48.Text = "Pair 8 Output";
             // 
+            // StatusLabel
+            // 
+            this.StatusLabel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.StatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusLabel.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.StatusLabel.Location = new System.Drawing.Point(499, 9);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(127, 90);
+            this.StatusLabel.TabIndex = 6;
+            this.StatusLabel.Text = "Device Active";
+            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // InterfaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 350);
+            this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -1991,6 +2006,7 @@
         private System.Windows.Forms.Label label47;
         internal System.Windows.Forms.NumericUpDown PairedOut8;
         private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label StatusLabel;
 
     }
 }

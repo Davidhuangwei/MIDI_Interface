@@ -23,6 +23,9 @@ namespace MIDI_Interface
         //                              changes in Control[] affect Faders[] and/or Knobs[] as well when performed with this
         //                              method
         // setY(int index, bool val) - Changes Button[index] to val, also updates form and device.
+        // returnAllX() - returns the Control array
+        // returnScaledX() - returns the Faders array
+        // returnY() - returns the Button array
 
         // PUBLIC VARIABLES:
         //=================
@@ -166,6 +169,21 @@ namespace MIDI_Interface
             {
                 HardwareSetup.noteMess(index, val);
             }
+        }
+
+        public static float[] returnAllX() // Returns unscaled array of all controls
+        {
+            return Control;
+        }
+
+        public static float[] returnScaledX() // Returns the array of scaled faders
+        {
+            return Faders;
+        }
+
+        public static bool[] returnY() // Returns array of button values
+        {
+            return Button;
         }
 
 

@@ -136,6 +136,7 @@ namespace MIDI_Interface
             ControlSender = true;
             sortOutmess(outmess); // use messages to change parameters
             ControlSender = false;
+            inForm.ChangeStatusText();
         }
 
         public void release() // Disposes of all devices and stops recording
@@ -171,7 +172,15 @@ namespace MIDI_Interface
                     builder.Data1 = note;  // Control number
                     builder.Data2 = (int)velocity; // send the value from interface
                     builder.Build();
-                    BCF2000_o.Send(builder.Result);
+                    try
+                    {
+                        BCF2000_o.Send(builder.Result);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine("MIDI Device not conencted. " + ex.Message);
+                        inForm.ChangeStatusText(ex);
+                    }
                     if (FormSender == false)
                     {
                         if (inForm != null)
@@ -200,7 +209,15 @@ namespace MIDI_Interface
                         builder.Data2 = 0;
                     }
                     builder.Build();
-                    BCF2000_o.Send(builder.Result);
+                    try
+                    {
+                        BCF2000_o.Send(builder.Result);
+                    }
+                    catch (Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Failed to send MIDI Message" + ex.Message);
+                        inForm.ChangeStatusText(ex);
+                    }
                     if (FormSender == false)
                     {
                         if (inForm != null)

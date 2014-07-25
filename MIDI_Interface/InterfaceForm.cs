@@ -26,6 +26,8 @@ namespace MIDI_Interface
 
         // INTERNAL METHODS:
         //=================
+        // ChangeStatusText() - changes the text in the status box if the controller is either not connected, the overloaded
+        //                      method adds input exception for other errors: (Exception ex)
         // setValue(int note, decimal value) - changes the value of a knob/fader on the interface
         // setButton(int note, bool onoff) -  changes a button from on to off and vice versa depending on received value
         // ChangePair(int index, float val) - Changes the value of the output pair numerical slider, indicated by index, to val
@@ -51,7 +53,7 @@ namespace MIDI_Interface
         // OnLoad(EventArgs e) - Called on Form Load, calls basic setup functions for hardware and software, reloads recent preset
         // OnClosed(EventArgs e) - Called when form is closed, releases resources and saves scaling presets
 
-
+        private static bool DisconnectNotify = false;
         private static NotifyIcon notifyIcon = null;   // System tray icon
         private HardwareSetup FormSetup; // Null instance of hardware setup class
 
@@ -77,6 +79,7 @@ namespace MIDI_Interface
             parameters.setForm(this);
             parameters.loadScale();
             FormSetup.initialise();
+            ChangeStatusText();
             return;
         }
 
@@ -86,7 +89,6 @@ namespace MIDI_Interface
             parameters.saveScale();
             base.OnClosed(e); // repeat as necessary
         }
-
 
         //System Tray icon methods
 
@@ -122,6 +124,42 @@ namespace MIDI_Interface
 
 
         // Methods for changing Form object parameters
+
+        internal void ChangeStatusText()
+        {
+            if (HardwareSetup.BCF2000_i == null || HardwareSetup.BCF2000_o == null)
+            {
+                this.StatusLabel.BackColor = Color.Red;
+                this.StatusLabel.Text = "Device not detected \nPlease connect a compatible MIDI Device";
+                this.StatusLabel.TextAlign = ContentAlignment.TopLeft;
+                DisconnectNotify = true;
+            }
+            else if (DisconnectNotify)
+            {
+                this.StatusLabel.BackColor = SystemColors.MenuHighlight;
+                this.StatusLabel.Text = "Device Active";
+                this.StatusLabel.TextAlign = ContentAlignment.MiddleCenter;
+                DisconnectNotify = false;
+            }
+        }
+
+        internal void ChangeStatusText(Exception ex)
+        {
+            if (ex != null)
+            {
+                this.StatusLabel.BackColor = Color.Red;
+                this.StatusLabel.Text = "Warning! " + ex.Message;
+                this.StatusLabel.TextAlign = ContentAlignment.TopLeft;
+                DisconnectNotify = true;
+            }
+            else if (DisconnectNotify)
+            {
+                this.StatusLabel.BackColor = SystemColors.MenuHighlight;
+                this.StatusLabel.Text = "Device Active";
+                this.StatusLabel.TextAlign = ContentAlignment.MiddleCenter;
+                DisconnectNotify = false;
+            }
+        }
 
         internal void setValue(int note, decimal value)
         {
