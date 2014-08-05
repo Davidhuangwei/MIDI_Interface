@@ -104,3 +104,4 @@ C:\Users\pjb13148\Downloads\MIDI_Interface-master\MIDI_Interface-master\MIDI_Int
 C:\Users\pjb13148\Downloads\MIDI_Interface-master\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.InterfaceForm.resources
 C:\Users\pjb13148\Downloads\MIDI_Interface-master\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.Properties.Resources.resources
 C:\Users\pjb13148\Downloads\MIDI_Interface-master\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.csproj.GenerateResource.Cache
+C:\Users\pjb13148\Downloads\MIDI_Interface-master\MIDI_Interface-master\MIDI_Interface\obj\x86\Debug\MIDI_Interface.csprojResolveAssemblyReference.cache

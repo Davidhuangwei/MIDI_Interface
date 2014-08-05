@@ -168,7 +168,11 @@ namespace MIDI_Interface
             if (!HardwareSetup.FormSender && !HardwareSetup.ControlSender && HardwareSetup.BCF2000_i != null)
             {
                 HardwareSetup.noteMess(index, val);
+
+                if (inForm != null)
+                    inForm.setButton(index, val);
             }
+            
         }
 
         public static float[] returnAllX() // Returns unscaled array of all controls

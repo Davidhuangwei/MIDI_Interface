@@ -799,12 +799,12 @@
             65536});
             this.Pair1_lo.Location = new System.Drawing.Point(2, 33);
             this.Pair1_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair1_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -843,12 +843,12 @@
             65536});
             this.Pair1_hi.Location = new System.Drawing.Point(2, 77);
             this.Pair1_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair1_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -877,12 +877,12 @@
             65536});
             this.Pair2_lo.Location = new System.Drawing.Point(78, 33);
             this.Pair2_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair2_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -902,12 +902,12 @@
             65536});
             this.Pair2_hi.Location = new System.Drawing.Point(78, 77);
             this.Pair2_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair2_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -955,12 +955,12 @@
             65536});
             this.Pair3_lo.Location = new System.Drawing.Point(154, 33);
             this.Pair3_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair3_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -980,12 +980,12 @@
             65536});
             this.Pair3_hi.Location = new System.Drawing.Point(154, 77);
             this.Pair3_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair3_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1033,12 +1033,12 @@
             65536});
             this.Pair4_lo.Location = new System.Drawing.Point(230, 33);
             this.Pair4_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair4_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1058,12 +1058,12 @@
             65536});
             this.Pair4_hi.Location = new System.Drawing.Point(230, 77);
             this.Pair4_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair4_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1111,12 +1111,12 @@
             65536});
             this.Pair5_lo.Location = new System.Drawing.Point(308, 33);
             this.Pair5_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair5_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1136,12 +1136,12 @@
             65536});
             this.Pair5_hi.Location = new System.Drawing.Point(308, 77);
             this.Pair5_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair5_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1189,12 +1189,12 @@
             65536});
             this.Pair6_lo.Location = new System.Drawing.Point(384, 33);
             this.Pair6_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair6_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1214,12 +1214,12 @@
             65536});
             this.Pair6_hi.Location = new System.Drawing.Point(384, 77);
             this.Pair6_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair6_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1267,12 +1267,12 @@
             65536});
             this.Pair7_lo.Location = new System.Drawing.Point(460, 33);
             this.Pair7_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair7_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1292,12 +1292,12 @@
             65536});
             this.Pair7_hi.Location = new System.Drawing.Point(460, 77);
             this.Pair7_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair7_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1345,12 +1345,12 @@
             65536});
             this.Pair8_lo.Location = new System.Drawing.Point(536, 33);
             this.Pair8_lo.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair8_lo.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1370,12 +1370,12 @@
             65536});
             this.Pair8_hi.Location = new System.Drawing.Point(536, 77);
             this.Pair8_hi.Maximum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             0});
             this.Pair8_hi.Minimum = new decimal(new int[] {
-            100000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1472,12 +1472,12 @@
             this.PairedOut1.InterceptArrowKeys = false;
             this.PairedOut1.Location = new System.Drawing.Point(14, 309);
             this.PairedOut1.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut1.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1509,12 +1509,12 @@
             this.PairedOut2.InterceptArrowKeys = false;
             this.PairedOut2.Location = new System.Drawing.Point(89, 309);
             this.PairedOut2.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut2.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1546,12 +1546,12 @@
             this.PairedOut3.InterceptArrowKeys = false;
             this.PairedOut3.Location = new System.Drawing.Point(165, 309);
             this.PairedOut3.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut3.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1583,12 +1583,12 @@
             this.PairedOut4.InterceptArrowKeys = false;
             this.PairedOut4.Location = new System.Drawing.Point(244, 309);
             this.PairedOut4.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut4.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1620,12 +1620,12 @@
             this.PairedOut5.InterceptArrowKeys = false;
             this.PairedOut5.Location = new System.Drawing.Point(319, 309);
             this.PairedOut5.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut5.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1657,12 +1657,12 @@
             this.PairedOut6.InterceptArrowKeys = false;
             this.PairedOut6.Location = new System.Drawing.Point(398, 309);
             this.PairedOut6.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut6.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1694,12 +1694,12 @@
             this.PairedOut7.InterceptArrowKeys = false;
             this.PairedOut7.Location = new System.Drawing.Point(471, 309);
             this.PairedOut7.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut7.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});
@@ -1731,12 +1731,12 @@
             this.PairedOut8.InterceptArrowKeys = false;
             this.PairedOut8.Location = new System.Drawing.Point(546, 309);
             this.PairedOut8.Maximum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             0});
             this.PairedOut8.Minimum = new decimal(new int[] {
-            10000000,
+            1000000000,
             0,
             0,
             -2147483648});

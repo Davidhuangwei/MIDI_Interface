@@ -85,8 +85,10 @@ namespace MIDI_Interface
 
         protected override void OnClosed(EventArgs e) // When the form is closed, ensure device is stopped and close stream
         {
+            notifyIcon.Visible = false;
             FormSetup.release();
             parameters.saveScale();
+            
             base.OnClosed(e); // repeat as necessary
         }
 

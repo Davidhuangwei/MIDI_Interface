@@ -38,16 +38,21 @@ namespace MIDI_Interface
         private static ChannelCommand n = ChannelCommand.NoteOn;
         private static InterfaceForm inForm;
         private static SynchronizationContext context; // Synchronisation context for syncing form
-        private static int inDeviceID = 0;             // Input device ID, increments with further device additions
         internal static InputDevice BCF2000_i = null;    // MIDI input device object
         internal static OutputDevice BCF2000_o = null;   // MIDI output to send messages to BCF2000
         private static outputMessages outmess;         // output messages stored in this struct
         internal static bool ControlSender = false;    // Set true when handling MIDI messages recieved from controller
         internal static bool FormSender = false;       // Set true when handling messages from Form
+        //internal static Action RunInit;
+        //internal static Action RunRelease;
 
         internal HardwareSetup(InterfaceForm mainForm) // For purposes of changing form values from this class
         {
             inForm = mainForm;
+        }
+
+        private HardwareSetup() // For purposes of changing form values from this class
+        {
         }
 
         private static void start() // Starts BCF2000 data stream
@@ -57,9 +62,26 @@ namespace MIDI_Interface
             return;
         }
 
+        //private static void CaptureDelegates()
+        //{
+        //    HardwareSetup temp = new HardwareSetup();
+        //    HardwareSetup.RunInit = new Action(temp.initialise);
+        //    HardwareSetup.RunRelease = new Action(temp.release);
+        //}
+
+        //public static void Init()
+        //{
+        //    CaptureDelegates();
+        //    HardwareSetup.RunInit();
+        //}
+        //public static void Rel()
+        //{
+        //    HardwareSetup.RunRelease();
+        //}
+
         public void initialise() // Initialises device for input and output when called
         {
-            if (InputDevice.DeviceCount <= inDeviceID) // If there aren't any connected devices
+            if (InputDevice.DeviceCount < 1) // If there aren't any connected devices
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");
             }
@@ -70,7 +92,7 @@ namespace MIDI_Interface
                     context = SynchronizationContext.Current; // update synchronisation context for threading in program
 
                     //System.Diagnostics.Debug.WriteLine("MIDI Devices detected!");
-                    BCF2000_i = new InputDevice(inDeviceID++);                        // Input from controller
+                    BCF2000_i = new InputDevice(0);                        // Input from controller
                     BCF2000_i.ChannelMessageReceived += HandleChannelMessageReceived; // Handles all channel messages
                     BCF2000_o = new OutputDevice(1);                                  // Output to controller
                     System.Diagnostics.Debug.WriteLine("MIDI Device " + BCF2000_i.DeviceID + " initialised");
