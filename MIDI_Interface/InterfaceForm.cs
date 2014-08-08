@@ -47,13 +47,15 @@ namespace MIDI_Interface
         // Pair_hi_ValueChanged(object sender, EventArgs e) - As with Fader/Knob except for high scaling boxes
         // Output_ValueChanged(object sender, EventArgs e) - As with Fader/Knob except for Paired Output boxes,
         //                                                   currently does nothing
+        // Sensitivity_ValueChanged(object sender, EventArgs e) - Changes the value of Sensitivity for faders
+        // resetButton_Click(object sender, EventArgs e) - resets all controls in top half of interface
 
         // OVERRIDEN METHODS:
         //=================
         // OnLoad(EventArgs e) - Called on Form Load, calls basic setup functions for hardware and software, reloads recent preset
         // OnClosed(EventArgs e) - Called when form is closed, releases resources and saves scaling presets
 
-        private static bool DisconnectNotify = false;
+        internal static bool DisconnectNotify = false;
         private static NotifyIcon notifyIcon = null;   // System tray icon
         private HardwareSetup FormSetup; // Null instance of hardware setup class
 
@@ -88,7 +90,7 @@ namespace MIDI_Interface
             notifyIcon.Visible = false;
             FormSetup.release();
             parameters.saveScale();
-            
+
             base.OnClosed(e); // repeat as necessary
         }
 
@@ -401,6 +403,9 @@ namespace MIDI_Interface
             int index;
             int.TryParse((string)dummy.Tag, out index);
             parameters.setScale(index, (float)dummy.Value, parameters.ScaleUpperBound[index]);
+            HardwareSetup.FormSender = true;
+            parameters.setX(index, parameters.Control[index]);
+            HardwareSetup.FormSender = false;
         }
 
         private void Pair_hi_ValueChanged(object sender, EventArgs e)
@@ -409,6 +414,9 @@ namespace MIDI_Interface
             int index;
             int.TryParse((string)dummy.Tag, out index);
             parameters.setScale(index, parameters.ScaleLowerBound[index], (float)dummy.Value);
+            HardwareSetup.FormSender = true;
+            parameters.setX(index, parameters.Control[index]);
+            HardwareSetup.FormSender = false;
         }
 
         private void Output_ValueChanged(object sender, EventArgs e) // Would handle output value changes
@@ -417,6 +425,21 @@ namespace MIDI_Interface
             //int index;
             //int.TryParse((string)dummy.Tag, out index);
             //parameters.changeOutput(index, (float)dummy.Value);
+        }
+
+        private void Sensitivity_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown dummy = (NumericUpDown)sender;
+            int index;
+            int.TryParse((string)dummy.Tag, out index);
+            HardwareSetup.FormSender = true;
+            parameters.setSensitivity(index, (float)dummy.Value);
+            HardwareSetup.FormSender = false;
+        }
+
+        private void resetButton_Click(object sender, EventArgs e)
+        {
+            HardwareSetup.resetControlValues();
         }
 
 

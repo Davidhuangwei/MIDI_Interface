@@ -19,6 +19,7 @@ namespace MIDI_Interface
         // loadScale() - load scaling parameters from Properties.Settings
         // saveScale() - save any changed scaling parameters to Properties.Settings
         // setScale(int pair, float low, float, hi) - sets the scaling parameters for a fader/knob pair
+        // setSensitivity(int pair, float value) - Sets the sensitivity of the fader for a fader/knob pair
         // setX(int index, float val) - sets the value of Control[index] to val, also updates device and form if necessary,
         //                              changes in Control[] affect Faders[] and/or Knobs[] as well when performed with this
         //                              method
@@ -50,6 +51,7 @@ namespace MIDI_Interface
 
         internal static float[] ScaleUpperBound = new float[8];
         internal static float[] ScaleLowerBound = new float[8];
+        internal static float[] FineScaleRatio = new float[8] { 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0.2f };
 
         internal static void setForm(InterfaceForm mainForm) // sets inForm to the current form
         {
@@ -82,7 +84,11 @@ namespace MIDI_Interface
             for (int i = 0; i < 8; i++)
                 scale.Add(ScaleUpperBound[i].ToString());
             My.scaling_hi = scale;
-
+            scale = null;
+            scale = new StringCollection();
+            for (int i = 0; i < 8; i++)
+                scale.Add(FineScaleRatio[i].ToString());
+            My.sensitivity = scale;
             My.Save();
         }
 
@@ -134,6 +140,45 @@ namespace MIDI_Interface
 
         }
 
+        public static void setSensitivity(int pair, float value)
+        {
+            FineScaleRatio[pair] = value;
+            if (HardwareSetup.FormSender == false)
+                if (inForm != null)
+                {
+                    switch (pair)
+                    {
+                        case 0:
+                            inForm.Sensitivity1.Value = (Decimal)value;
+                            break;
+                        case 1:
+                            inForm.Sensitivity2.Value = (Decimal)value;
+                            break;
+                        case 2:
+                            inForm.Sensitivity3.Value = (Decimal)value;
+                            break;
+                        case 3:
+                            inForm.Sensitivity4.Value = (Decimal)value;
+                            break;
+                        case 4:
+                            inForm.Sensitivity5.Value = (Decimal)value;
+                            break;
+                        case 5:
+                            inForm.Sensitivity6.Value = (Decimal)value;
+                            break;
+                        case 6:
+                            inForm.Sensitivity7.Value = (Decimal)value;
+                            break;
+                        case 7:
+                            inForm.Sensitivity8.Value = (Decimal)value;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            setX(pair, Control[pair]);
+        }
+
         public static void setX(int index, float val) // Set the value of a fader/knob
         {
             Control[index] = val;
@@ -141,22 +186,53 @@ namespace MIDI_Interface
             {
                 HardwareSetup.controlMess(index, val);
             }
+            // Old method of setting fader values:
+            //if (index < 8)
+            //{
+            //    /*
+            //    float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
+            //    Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
+            //    increment /= (float)127.0;
+            //     * Faders[index] = Knobs[index] + (increment * Control[index]);
+            //     */
+            //    float Range = ScaleUpperBound[index] - ScaleLowerBound[index];
+            //    float StepCoarse = Range/127f;
+            //    float ValueCoarse = ScaleLowerBound[index] + ((float)Control[index + 8] / 127f) * Range;
+            //    float RangeFine = StepCoarse * FineScaleRatio[index];
+            //    float ValueFine = (((float)Control[index] - 63f) / 127f) * RangeFine;
 
-            if (index < 8)
-            {
-                float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
-                Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
-                increment /= (float)127.0;
-                Faders[index] = Knobs[index] + (increment * Control[index]);
-            }
-            else
-            {
+            //    Faders[index] = ValueCoarse + ValueFine;
+            //}
+            //else
+            //{
+            //    index -= 8;
+
+            //    float Range = ScaleUpperBound[index] - ScaleLowerBound[index];
+            //    float ValueCoarse = ScaleLowerBound[index] + ((float)Control[index + 8] / 127f) * Range;
+            //    float RangeFine = Range * FineScaleRatio[index];
+            //    float ValueFine = (((float)Control[index] - 63f) / 127f) * RangeFine;
+            //    Faders[index] = ValueCoarse + ValueFine;
+
+            //    /*               
+            //    float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
+            //    Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
+            //    increment /= (float)127.0;
+            //    Faders[index] = Knobs[index] + (increment * Control[index]);
+            //     */
+            //}
+
+            if (index > 7) // if index is greater than 7, it refers to a knob, hence reduce by 8 for associated pair
                 index -= 8;
-                float increment = (ScaleUpperBound[index] - ScaleLowerBound[index]) / (float)127.0;
-                Knobs[index] = ScaleLowerBound[index] + (increment * Control[index + 8]);
-                increment /= (float)127.0;
-                Faders[index] = Knobs[index] + (increment * Control[index]);
-            }
+
+            float Range = ScaleUpperBound[index] - ScaleLowerBound[index]; // Total range of faders
+            float StepCoarse = Range / 127f;
+            float ValueCoarse = ScaleLowerBound[index] + (Control[index + 8] * StepCoarse); // Knob value
+            float RangeFine = Range * (1f - FineScaleRatio[index]); // Range of fader within coarse range
+            if (RangeFine == 0)
+                RangeFine += 0.01f; // Make sure faders always do something at least
+            float ValueFine = ((Control[index] - 63f) / 127f) * RangeFine;
+            Faders[index] = ValueCoarse + ValueFine;
+
             if (inForm != null)
                 inForm.ChangePair(index, Faders[index]);
         }
@@ -172,7 +248,7 @@ namespace MIDI_Interface
                 if (inForm != null)
                     inForm.setButton(index, val);
             }
-            
+
         }
 
         public static float[] returnAllX() // Returns unscaled array of all controls
@@ -189,6 +265,8 @@ namespace MIDI_Interface
         {
             return Button;
         }
+
+
 
 
 

@@ -12,7 +12,7 @@ namespace MIDI_Interface.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -64,6 +64,28 @@ namespace MIDI_Interface.Properties {
             }
             set {
                 this["scaling_hi"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+  <string>0.2</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection sensitivity {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["sensitivity"]));
+            }
+            set {
+                this["sensitivity"] = value;
             }
         }
     }

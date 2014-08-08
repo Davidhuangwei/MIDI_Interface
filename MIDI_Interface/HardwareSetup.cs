@@ -25,6 +25,7 @@ namespace MIDI_Interface
         // INTERNAL METHODS:
         //=================
         // HardwareSetup(InterfaceForm mainForm) - sets static declaration of inForm to the current form
+        // resetControlValues() - Set all faders to centre position and all buttons to off
         // controlMess(int note, float velocity) - sends a control message to the MIDI device
         // noteMess(int note, bool onoff) - sends a NoteOn message to the MIDI device
 
@@ -33,6 +34,12 @@ namespace MIDI_Interface
         // start() - begins BCF2000 recording input MIDI messages
         // HandleChannelMessageReceived() - Event handler for MIDI messages received from MIDI devices
         // sortOutmess(outputMessages mess) - sorts MIDI messages for the adjustment of parameters and form values
+
+        // UNUSED METHODS:
+        //=================
+        // private void CaptureDelegates() - captures non-static methods in action delegates for use in Matlab
+        // public void Init() - performs CaptureDelegates() and then initialisation delegate
+        // public void Rel() - performs release() method by delegate
 
 
         private static ChannelCommand n = ChannelCommand.NoteOn;
@@ -43,12 +50,12 @@ namespace MIDI_Interface
         private static outputMessages outmess;         // output messages stored in this struct
         internal static bool ControlSender = false;    // Set true when handling MIDI messages recieved from controller
         internal static bool FormSender = false;       // Set true when handling messages from Form
-        //internal static Action RunInit;
-        //internal static Action RunRelease;
+        internal static Action RunInit;
+        internal static Action RunRelease;
 
         internal HardwareSetup(InterfaceForm mainForm) // For purposes of changing form values from this class
         {
-            inForm = mainForm;
+            inForm = mainForm; if (FormSender) { }
         }
 
         private HardwareSetup() // For purposes of changing form values from this class
@@ -62,25 +69,26 @@ namespace MIDI_Interface
             return;
         }
 
-        //private static void CaptureDelegates()
-        //{
-        //    HardwareSetup temp = new HardwareSetup();
-        //    HardwareSetup.RunInit = new Action(temp.initialise);
-        //    HardwareSetup.RunRelease = new Action(temp.release);
-        //}
+        private static void CaptureDelegates()
+        {
+            HardwareSetup temp = new HardwareSetup();
+            HardwareSetup.RunInit = new Action(temp.initialise);
+            HardwareSetup.RunRelease = new Action(temp.release);
+        }
 
         //public static void Init()
         //{
         //    CaptureDelegates();
         //    HardwareSetup.RunInit();
         //}
-        //public static void Rel()
-        //{
-        //    HardwareSetup.RunRelease();
-        //}
+        public static void Rel()
+        {
+            HardwareSetup.RunRelease();
+        }
 
         public void initialise() // Initialises device for input and output when called
         {
+            CaptureDelegates();
             if (InputDevice.DeviceCount < 1) // If there aren't any connected devices
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");
@@ -131,8 +139,26 @@ namespace MIDI_Interface
                     }
                 }
             }
+            resetControlValues();
             return;
 
+        }
+
+        internal static void resetControlValues() // Set all faders to default position and all buttons to off
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                controlMess(i, 63);
+                controlMess(i + 8, 0);
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                noteMess(i, false);
+            }
+            if (BCF2000_i == null || BCF2000_o == null || BCF2000_o.IsDisposed || BCF2000_i.IsDisposed || InterfaceForm.DisconnectNotify)
+                RunInit();
+            if (inForm != null)
+                inForm.ChangeStatusText();
         }
 
         private void HandleChannelMessageReceived(object sender, ChannelMessageEventArgs e) // Event Handler for MIDI messages
@@ -158,7 +184,8 @@ namespace MIDI_Interface
             ControlSender = true;
             sortOutmess(outmess); // use messages to change parameters
             ControlSender = false;
-            inForm.ChangeStatusText();
+            if (inForm != null)
+                inForm.ChangeStatusText();
         }
 
         public void release() // Disposes of all devices and stops recording
@@ -201,14 +228,15 @@ namespace MIDI_Interface
                     catch (Exception ex)
                     {
                         System.Diagnostics.Debug.WriteLine("MIDI Device not conencted. " + ex.Message);
-                        inForm.ChangeStatusText(ex);
-                    }
-                    if (FormSender == false)
-                    {
                         if (inForm != null)
-                            inForm.setValue(note, (decimal)velocity);
+                            inForm.ChangeStatusText(ex);
                     }
                 }
+            }
+            if (FormSender == false)
+            {
+                if (inForm != null)
+                    inForm.setValue(note, (decimal)velocity);
             }
         }
 
@@ -238,14 +266,15 @@ namespace MIDI_Interface
                     catch (Exception ex)
                     {
                         System.Diagnostics.Debug.WriteLine("Failed to send MIDI Message" + ex.Message);
-                        inForm.ChangeStatusText(ex);
-                    }
-                    if (FormSender == false)
-                    {
                         if (inForm != null)
-                            inForm.setButton(note, onoff);
+                            inForm.ChangeStatusText(ex);
                     }
                 }
+            }
+            if (FormSender == false)
+            {
+                if (inForm != null)
+                    inForm.setButton(note, onoff);
             }
         }
 

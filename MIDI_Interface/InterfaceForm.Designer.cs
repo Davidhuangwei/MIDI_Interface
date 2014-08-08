@@ -121,6 +121,22 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Sensitivity8 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity7 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity6 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity5 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity4 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity3 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity2 = new System.Windows.Forms.NumericUpDown();
+            this.Sensitivity1 = new System.Windows.Forms.NumericUpDown();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.PairedOut1 = new System.Windows.Forms.NumericUpDown();
             this.label41 = new System.Windows.Forms.Label();
             this.PairedOut2 = new System.Windows.Forms.NumericUpDown();
@@ -138,6 +154,7 @@
             this.PairedOut8 = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.StatusLabel = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Fader1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fader3)).BeginInit();
@@ -171,6 +188,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_lo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut3)).BeginInit();
@@ -1433,18 +1458,34 @@
             this.panel1.Controls.Add(this.Pair7_lo);
             this.panel1.Controls.Add(this.Pair8_lo);
             this.panel1.Controls.Add(this.label39);
+            this.panel1.Controls.Add(this.Sensitivity8);
+            this.panel1.Controls.Add(this.Sensitivity7);
+            this.panel1.Controls.Add(this.Sensitivity6);
+            this.panel1.Controls.Add(this.Sensitivity5);
+            this.panel1.Controls.Add(this.Sensitivity4);
+            this.panel1.Controls.Add(this.Sensitivity3);
+            this.panel1.Controls.Add(this.Sensitivity2);
+            this.panel1.Controls.Add(this.Sensitivity1);
             this.panel1.Controls.Add(this.Pair1_hi);
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.Pair2_hi);
             this.panel1.Controls.Add(this.label33);
             this.panel1.Controls.Add(this.Pair3_hi);
+            this.panel1.Controls.Add(this.label56);
             this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.label55);
             this.panel1.Controls.Add(this.Pair4_hi);
+            this.panel1.Controls.Add(this.label54);
             this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label53);
             this.panel1.Controls.Add(this.Pair5_hi);
+            this.panel1.Controls.Add(this.label52);
             this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label51);
             this.panel1.Controls.Add(this.Pair6_hi);
+            this.panel1.Controls.Add(this.label50);
             this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label49);
             this.panel1.Controls.Add(this.Pair7_hi);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.Pair8_hi);
@@ -1458,8 +1499,280 @@
             this.panel1.Controls.Add(this.label26);
             this.panel1.Location = new System.Drawing.Point(10, 163);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(613, 109);
+            this.panel1.Size = new System.Drawing.Size(613, 152);
             this.panel1.TabIndex = 5;
+            // 
+            // Sensitivity8
+            // 
+            this.Sensitivity8.DecimalPlaces = 2;
+            this.Sensitivity8.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity8.Location = new System.Drawing.Point(534, 122);
+            this.Sensitivity8.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity8.Name = "Sensitivity8";
+            this.Sensitivity8.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity8.TabIndex = 3;
+            this.Sensitivity8.Tag = "7";
+            this.Sensitivity8.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity8.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity7
+            // 
+            this.Sensitivity7.DecimalPlaces = 2;
+            this.Sensitivity7.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity7.Location = new System.Drawing.Point(459, 122);
+            this.Sensitivity7.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity7.Name = "Sensitivity7";
+            this.Sensitivity7.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity7.TabIndex = 3;
+            this.Sensitivity7.Tag = "6";
+            this.Sensitivity7.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity7.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity6
+            // 
+            this.Sensitivity6.DecimalPlaces = 2;
+            this.Sensitivity6.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity6.Location = new System.Drawing.Point(386, 122);
+            this.Sensitivity6.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity6.Name = "Sensitivity6";
+            this.Sensitivity6.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity6.TabIndex = 3;
+            this.Sensitivity6.Tag = "5";
+            this.Sensitivity6.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity6.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity5
+            // 
+            this.Sensitivity5.DecimalPlaces = 2;
+            this.Sensitivity5.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity5.Location = new System.Drawing.Point(307, 122);
+            this.Sensitivity5.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity5.Name = "Sensitivity5";
+            this.Sensitivity5.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity5.TabIndex = 3;
+            this.Sensitivity5.Tag = "4";
+            this.Sensitivity5.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity5.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity4
+            // 
+            this.Sensitivity4.DecimalPlaces = 2;
+            this.Sensitivity4.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity4.Location = new System.Drawing.Point(232, 122);
+            this.Sensitivity4.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity4.Name = "Sensitivity4";
+            this.Sensitivity4.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity4.TabIndex = 3;
+            this.Sensitivity4.Tag = "3";
+            this.Sensitivity4.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity4.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity3
+            // 
+            this.Sensitivity3.DecimalPlaces = 2;
+            this.Sensitivity3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity3.Location = new System.Drawing.Point(153, 122);
+            this.Sensitivity3.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity3.Name = "Sensitivity3";
+            this.Sensitivity3.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity3.TabIndex = 3;
+            this.Sensitivity3.Tag = "2";
+            this.Sensitivity3.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity3.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity2
+            // 
+            this.Sensitivity2.DecimalPlaces = 2;
+            this.Sensitivity2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity2.Location = new System.Drawing.Point(77, 122);
+            this.Sensitivity2.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity2.Name = "Sensitivity2";
+            this.Sensitivity2.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity2.TabIndex = 3;
+            this.Sensitivity2.Tag = "1";
+            this.Sensitivity2.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity2.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // Sensitivity1
+            // 
+            this.Sensitivity1.DecimalPlaces = 2;
+            this.Sensitivity1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.Sensitivity1.Location = new System.Drawing.Point(3, 122);
+            this.Sensitivity1.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Sensitivity1.Name = "Sensitivity1";
+            this.Sensitivity1.Size = new System.Drawing.Size(70, 20);
+            this.Sensitivity1.TabIndex = 3;
+            this.Sensitivity1.Tag = "0";
+            this.Sensitivity1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            65536});
+            this.Sensitivity1.ValueChanged += new System.EventHandler(this.Sensitivity_ValueChanged);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(534, 106);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(54, 13);
+            this.label56.TabIndex = 4;
+            this.label56.Text = "Sensitivity";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(459, 106);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(54, 13);
+            this.label55.TabIndex = 4;
+            this.label55.Text = "Sensitivity";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(386, 106);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(54, 13);
+            this.label54.TabIndex = 4;
+            this.label54.Text = "Sensitivity";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(307, 106);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(54, 13);
+            this.label53.TabIndex = 4;
+            this.label53.Text = "Sensitivity";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(232, 106);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(54, 13);
+            this.label52.TabIndex = 4;
+            this.label52.Text = "Sensitivity";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(153, 106);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(54, 13);
+            this.label51.TabIndex = 4;
+            this.label51.Text = "Sensitivity";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(77, 106);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(54, 13);
+            this.label50.TabIndex = 4;
+            this.label50.Text = "Sensitivity";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(3, 106);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(54, 13);
+            this.label49.TabIndex = 4;
+            this.label49.Text = "Sensitivity";
             // 
             // PairedOut1
             // 
@@ -1470,7 +1783,7 @@
             0,
             0});
             this.PairedOut1.InterceptArrowKeys = false;
-            this.PairedOut1.Location = new System.Drawing.Point(14, 309);
+            this.PairedOut1.Location = new System.Drawing.Point(14, 343);
             this.PairedOut1.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1492,7 +1805,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(14, 290);
+            this.label41.Location = new System.Drawing.Point(14, 324);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(69, 13);
             this.label41.TabIndex = 2;
@@ -1507,7 +1820,7 @@
             0,
             0});
             this.PairedOut2.InterceptArrowKeys = false;
-            this.PairedOut2.Location = new System.Drawing.Point(89, 309);
+            this.PairedOut2.Location = new System.Drawing.Point(89, 343);
             this.PairedOut2.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1529,7 +1842,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(89, 290);
+            this.label42.Location = new System.Drawing.Point(89, 324);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(69, 13);
             this.label42.TabIndex = 2;
@@ -1544,7 +1857,7 @@
             0,
             0});
             this.PairedOut3.InterceptArrowKeys = false;
-            this.PairedOut3.Location = new System.Drawing.Point(165, 309);
+            this.PairedOut3.Location = new System.Drawing.Point(165, 343);
             this.PairedOut3.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1566,7 +1879,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(165, 290);
+            this.label43.Location = new System.Drawing.Point(165, 324);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(69, 13);
             this.label43.TabIndex = 2;
@@ -1581,7 +1894,7 @@
             0,
             0});
             this.PairedOut4.InterceptArrowKeys = false;
-            this.PairedOut4.Location = new System.Drawing.Point(244, 309);
+            this.PairedOut4.Location = new System.Drawing.Point(244, 343);
             this.PairedOut4.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1603,7 +1916,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(244, 290);
+            this.label44.Location = new System.Drawing.Point(244, 324);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(69, 13);
             this.label44.TabIndex = 2;
@@ -1618,7 +1931,7 @@
             0,
             0});
             this.PairedOut5.InterceptArrowKeys = false;
-            this.PairedOut5.Location = new System.Drawing.Point(319, 309);
+            this.PairedOut5.Location = new System.Drawing.Point(319, 343);
             this.PairedOut5.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1640,7 +1953,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(319, 290);
+            this.label45.Location = new System.Drawing.Point(319, 324);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(69, 13);
             this.label45.TabIndex = 2;
@@ -1655,7 +1968,7 @@
             0,
             0});
             this.PairedOut6.InterceptArrowKeys = false;
-            this.PairedOut6.Location = new System.Drawing.Point(398, 309);
+            this.PairedOut6.Location = new System.Drawing.Point(398, 343);
             this.PairedOut6.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1677,7 +1990,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(398, 290);
+            this.label46.Location = new System.Drawing.Point(398, 324);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(69, 13);
             this.label46.TabIndex = 2;
@@ -1692,7 +2005,7 @@
             0,
             0});
             this.PairedOut7.InterceptArrowKeys = false;
-            this.PairedOut7.Location = new System.Drawing.Point(471, 309);
+            this.PairedOut7.Location = new System.Drawing.Point(471, 343);
             this.PairedOut7.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1714,7 +2027,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(471, 290);
+            this.label47.Location = new System.Drawing.Point(471, 324);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(69, 13);
             this.label47.TabIndex = 2;
@@ -1729,7 +2042,7 @@
             0,
             0});
             this.PairedOut8.InterceptArrowKeys = false;
-            this.PairedOut8.Location = new System.Drawing.Point(546, 309);
+            this.PairedOut8.Location = new System.Drawing.Point(546, 343);
             this.PairedOut8.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -1751,7 +2064,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(546, 290);
+            this.label48.Location = new System.Drawing.Point(546, 324);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(69, 13);
             this.label48.TabIndex = 2;
@@ -1770,11 +2083,22 @@
             this.StatusLabel.Text = "Device Active";
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(267, 369);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(98, 23);
+            this.resetButton.TabIndex = 7;
+            this.resetButton.Text = "Reset Controls";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
             // InterfaceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 350);
+            this.ClientSize = new System.Drawing.Size(635, 394);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.StatusLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
@@ -1882,6 +2206,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Pair8_hi)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Sensitivity1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PairedOut3)).EndInit();
@@ -2007,6 +2339,23 @@
         internal System.Windows.Forms.NumericUpDown PairedOut8;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label StatusLabel;
+        internal System.Windows.Forms.NumericUpDown Sensitivity1;
+        private System.Windows.Forms.Label label49;
+        internal System.Windows.Forms.NumericUpDown Sensitivity8;
+        internal System.Windows.Forms.NumericUpDown Sensitivity7;
+        internal System.Windows.Forms.NumericUpDown Sensitivity6;
+        internal System.Windows.Forms.NumericUpDown Sensitivity5;
+        internal System.Windows.Forms.NumericUpDown Sensitivity4;
+        internal System.Windows.Forms.NumericUpDown Sensitivity3;
+        internal System.Windows.Forms.NumericUpDown Sensitivity2;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Button resetButton;
 
     }
 }
