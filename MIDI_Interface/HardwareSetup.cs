@@ -50,6 +50,8 @@ namespace MIDI_Interface
         private static outputMessages outmess;         // output messages stored in this struct
         internal static bool ControlSender = false;    // Set true when handling MIDI messages recieved from controller
         internal static bool FormSender = false;       // Set true when handling messages from Form
+        internal static bool FirstRun = true;
+        internal static bool InitSender = false;
         internal static Action RunInit;
         internal static Action RunRelease;
 
@@ -76,11 +78,14 @@ namespace MIDI_Interface
             HardwareSetup.RunRelease = new Action(temp.release);
         }
 
-        //public static void Init()
-        //{
-        //    CaptureDelegates();
-        //    HardwareSetup.RunInit();
-        //}
+        public static void Init()
+        {
+            if (FirstRun)
+                CaptureDelegates();
+            InitSender = true;
+            HardwareSetup.RunInit();
+            InitSender = false;
+        }
         public static void Rel()
         {
             HardwareSetup.RunRelease();
@@ -88,7 +93,9 @@ namespace MIDI_Interface
 
         public void initialise() // Initialises device for input and output when called
         {
-            CaptureDelegates();
+            if (!InitSender && FirstRun)
+                CaptureDelegates();
+
             if (InputDevice.DeviceCount < 1) // If there aren't any connected devices
             {
                 //System.Diagnostics.Debug.WriteLine("No Devices");
@@ -139,7 +146,11 @@ namespace MIDI_Interface
                     }
                 }
             }
-            resetControlValues();
+            if (FirstRun)
+            {
+                resetControlValues();
+                FirstRun = false;
+            }
             return;
 
         }
@@ -155,7 +166,7 @@ namespace MIDI_Interface
             {
                 noteMess(i, false);
             }
-            if (BCF2000_i == null || BCF2000_o == null || BCF2000_o.IsDisposed || BCF2000_i.IsDisposed || InterfaceForm.DisconnectNotify)
+            if (!FirstRun && (BCF2000_i == null || BCF2000_o == null || BCF2000_o.IsDisposed || BCF2000_i.IsDisposed || InterfaceForm.DisconnectNotify))
                 RunInit();
             if (inForm != null)
                 inForm.ChangeStatusText();

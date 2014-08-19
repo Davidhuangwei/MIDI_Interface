@@ -25,3 +25,17 @@ D:\My Cubby\2014-08-06 Sam Midi controller\MIDI_Interface-master\MIDI_Interface\
 D:\My Cubby\2014-08-06 Sam Midi controller\MIDI_Interface-master\MIDI_Interface\obj\Debug\MIDI_Interface.csproj.GenerateResource.Cache
 D:\My Cubby\2014-08-06 Sam Midi controller\MIDI_Interface-master\MIDI_Interface\obj\Debug\MIDI_Interface.exe
 D:\My Cubby\2014-08-06 Sam Midi controller\MIDI_Interface-master\MIDI_Interface\obj\Debug\MIDI_Interface.pdb
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe.config
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.exe
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.pdb
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.exe
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\MIDI_Interface.pdb
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Collections.dll
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.dll
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Midi.dll
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Multimedia.Timers.dll
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\bin\Debug\Sanford.Threading.dll
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.csprojResolveAssemblyReference.cache
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.InterfaceForm.resources
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.Properties.Resources.resources
+C:\Users\S. McCormack\Documents\GitHub\MIDI_Interface\MIDI_Interface\obj\Debug\MIDI_Interface.csproj.GenerateResource.Cache
